@@ -20,7 +20,7 @@ Statistics are written to TXT files on the computer disk (by default, to the Dow
   <img width="600" alt="ScoreBoard txt files" src="https://user-images.githubusercontent.com/61139898/193475176-aed0be42-bb3b-412b-9e71-5159255364a7.jpg">
 </p>
 
-[![Download from Mac AppStore](img/MacAppStore.png)](https://apps.apple.com/us/app/scoreboard-for-sport-stream/id1579159150)
+[![Download from Mac AppStore](img/MacAppStore.png)](https://apps.apple.com/app/id1579159150)
 
 ### Additional features:
 - Hotkeys for easy control
@@ -40,10 +40,10 @@ Statistics are written to TXT files on the computer disk (by default, to the Dow
 </details>
 
 ## Video instructions for use
-  [<img width="500" alt="ScoreBoard for OBS on MacOS (instruction)" src="https://scoreboardapp.github.io/mac/img/VideoInstruction.png">](https://youtu.be/dHj56FIE2ng "ScoreBoard for OBS on MacOS (instruction)")
+  [<img width="500" alt="ScoreBoard for OBS on MacOS (instruction)" src="https://scoreboardmac.github.io/img/VideoInstruction.png">](https://youtu.be/dHj56FIE2ng "ScoreBoard for OBS on MacOS (instruction)")
 
 ## Other
-[PRIVACY POLICY](https://scoreboardapp.github.io/mac/PRIVACY_POLICY.md)
+[PRIVACY POLICY](https://scoreboardmac.github.io/PRIVACY_POLICY.md)
 
-[Contact for support](https://scoreboardapp.github.io/mac/support.html)\
+[Contact for support](https://scoreboardmac.github.io/support.html)\
 *Errors, requests and questions are accepted.*
