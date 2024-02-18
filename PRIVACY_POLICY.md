@@ -12,4 +12,4 @@ We do not use or have access to your personal data, including all data related t
 
 ## Contact Us
 
-If you have any questions or concerns about our Privacy Policy, please [contact us](https://scoreboardmac.github.io/support.html)
+If you have any questions or concerns about our Privacy Policy, please [contact us](/support.html)
