@@ -11,21 +11,22 @@ Statistics are written to TXT files on the computer disk (by default, to the Dow
     </a>
 </p>
 
-- Old ScoreBoard **free version 0.5** (not in MacAppStore and for trial): [Download](/free-old-apps/ScoreBoard-v0.5.dmg).  
-_For the free version, watch the video instructions (at the bottom of this page) from the very beginning._
+> Old ScoreBoard **free version 0.5** (not in MacAppStore and for trial): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
+_For free version, watch the video instructions from start (at the bottom of this page)._
 
 ### ScoreBoard allows you to keep statistics:
 - Time (timer or stopwatch)
 - Goals (points, strikes) for each team
+- Extra Points/Shots for both teams
 - Period (half, quarter)
 - The names of the two teams
 - Penalties for hockey and similar games
 
 <p align="center">
-  <img width="600" alt="ScoreBoard main" src="https://user-images.githubusercontent.com/61139898/193475164-ca579aff-ce5b-45f8-b5fd-daa73fa5ab11.jpg">
-  <img width="600" alt="ScoreBoard preferences" src="https://user-images.githubusercontent.com/61139898/193475171-306fc840-8c07-445c-bd82-45d8fe1f062d.jpg">
-  <img width="600" alt="ScoreBoard hotkeys menu" src="https://user-images.githubusercontent.com/61139898/193475172-9b48cd44-bf47-498e-b9d9-f4b32e91944b.jpg">
-  <img width="600" alt="ScoreBoard txt files" src="https://user-images.githubusercontent.com/61139898/193475176-aed0be42-bb3b-412b-9e71-5159255364a7.jpg">
+  <img width="800" alt="ScoreBoard txt files" src="/img/1_main_en.jpg">
+  <img width="800" alt="ScoreBoard txt files" src="/img/2_preferences_en.jpg">
+  <img width="800" alt="ScoreBoard txt files" src="/img/3_hotkeys_en.jpg">
+  <img width="800" alt="ScoreBoard txt files" src="/img/4_txtFiles_en.jpg">
 </p>
 
 ### Additional features:
@@ -50,12 +51,12 @@ _For the free version, watch the video instructions (at the bottom of this page)
 _The OBS and ScoreBoard have already been updated several times, but the settings in the video are similar._
 
 <p align="center">
-	<iframe width="640" height="480" src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&amp;start=50" frameborder="0" allowfullscreen></iframe>
+	<iframe width="720" height="540" src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&amp;start=50" frameborder="0" allowfullscreen></iframe>
 </p>
 
 ## An example of a finished scoreboard after setting it up in OBS
 <p align="center">
-	<img width="600" alt="Possible scoreboard template in OBS" src="https://user-images.githubusercontent.com/61139898/91486208-9af92d00-e8b4-11ea-9844-2f80877b539b.jpg">
+	<img width="800" alt="Possible scoreboard template in OBS" src="https://user-images.githubusercontent.com/61139898/91486208-9af92d00-e8b4-11ea-9844-2f80877b539b.jpg">
 </p>
 
 ## Other
