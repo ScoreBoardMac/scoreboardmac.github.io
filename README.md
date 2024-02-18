@@ -1,4 +1,4 @@
-# ScoreBoard for sport stream
+# Scoreboard with statistics for sports broadcasts
 **A simple statistics utility for streaming live sports games in OBS or Wirecast on MacOS.**
 
 Scoreboard to improve your sports streams on OBS, Wirecast, Streamlabs and more. It will help you easily display statistics over the online broadcast of sports games.
@@ -10,6 +10,9 @@ Statistics are written to TXT files on the computer disk (by default, to the Dow
         <img alt="Download from Mac AppStore" src="/img/MacAppStore.png">
     </a>
 </p>
+
+- Old ScoreBoard **free version 0.5** (not in MacAppStore and for trial): [Download](/free-old-apps/ScoreBoard-v0.5.dmg).  
+_For the free version, watch the video instructions (at the bottom of this page) from the very beginning._
 
 ### ScoreBoard allows you to keep statistics:
 - Time (timer or stopwatch)
@@ -47,8 +50,7 @@ Statistics are written to TXT files on the computer disk (by default, to the Dow
 _The OBS and ScoreBoard have already been updated several times, but the settings in the video are similar._
 
 <p align="center">
-<!--	<iframe width="560" height="315" src="https://www.youtube.com/embed/dHj56FIE2ng;start=50" frameborder="0" allowfullscreen></iframe> -->
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&amp;start=50" frameborder="0" allowfullscreen></iframe>
+	<iframe width="640" height="480" src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&amp;start=50" frameborder="0" allowfullscreen></iframe>
 </p>
 
 ## An example of a finished scoreboard after setting it up in OBS
