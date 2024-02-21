@@ -11,7 +11,7 @@ Statistics are written to TXT files on the computer disk (by default, to the Dow
     </a>
 </p>
 
-> Old ScoreBoard **free version 0.5** (not in MacAppStore and for trial): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
+> Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
 _For free version, watch the video instructions from start (at the bottom of this page)._
 
 ### ScoreBoard allows you to keep statistics:
