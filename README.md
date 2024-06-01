@@ -21,6 +21,7 @@ _For free version, watch the video instructions from start (at the bottom of thi
 - Period (half, quarter)
 - The names of the two teams
 - Penalties for hockey and similar games
+- Yellow and Red cards for soccer
 
 <p align="center">
   <img width="800" alt="ScoreBoard txt files" src="/img/1_main_en.jpg">
