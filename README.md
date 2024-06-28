@@ -24,10 +24,10 @@ _For free version, watch the video instructions from start (at the bottom of thi
 - Yellow and Red cards for soccer
 
 <p align="center">
-  <img width="800" alt="ScoreBoard txt files" src="/img/1_main_en.jpg">
-  <img width="800" alt="ScoreBoard txt files" src="/img/2_preferences_en.jpg">
-  <img width="800" alt="ScoreBoard txt files" src="/img/3_hotkeys_en.jpg">
-  <img width="800" alt="ScoreBoard txt files" src="/img/4_txtFiles_en.jpg">
+  <img width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png">
+  <img width="800" alt="ScoreBoard txt files" src="/img/2_preferences_en.png">
+  <img width="800" alt="ScoreBoard txt files" src="/img/3_hotkeys_en.png">
+  <img width="800" alt="ScoreBoard txt files" src="/img/4_txtFiles_en.png">
 </p>
 
 ### Additional features:
@@ -57,7 +57,7 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
 
 ## An example of a finished scoreboard after setting it up in OBS
 <p align="center">
-	<img width="800" alt="Possible scoreboard template in OBS" src="https://user-images.githubusercontent.com/61139898/91486208-9af92d00-e8b4-11ea-9844-2f80877b539b.jpg">
+	<img width="800" alt="Possible scoreboard template in OBS" src="/img/output_example.jpg">
 </p>
 
 ## Other
