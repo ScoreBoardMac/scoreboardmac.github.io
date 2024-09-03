@@ -1,9 +1,9 @@
-# Scoreboard with statistics for sports broadcasts
-**A simple statistics utility for streaming live sports games in OBS or Wirecast on MacOS.**
+# Scoreboard for Mac with statistics for sports broadcasts
+**Universal sports scoreboard for displaying statistics in online sports broadcasts in OBS, Wirecast, Streamlabs on macOS.**
 
-Scoreboard to improve your sports streams on OBS, Wirecast, Streamlabs and more. It will help you easily display statistics over the online broadcast of sports games.
+A fully functional utility for displaying statistics in a sports stream via OBS, Wirecast, Streamlabs, etc. It will help display the statistics needed for a specific game over your video of online sports broadcasts.
 
-Statistics are written to TXT files on the computer disk (by default, to the Downloads directory). Each file can be used in a streamer program (add source: text) and overlay it over any of your scoreboard images.
+Text data is written to TXT files on your computer's disk (by default, to the Downloads directory). Each file can be used in a streamer program (add source: text) and overlaid on any image of your scoreboard.
 
 <p align="center">
     <a href="https://apps.apple.com/app/id1579159150" title="Download from Mac AppStore">
@@ -16,8 +16,9 @@ _For free version, watch the video instructions from start (at the bottom of thi
 
 ### ScoreBoard allows you to keep statistics:
 - Time (timer or stopwatch)
+- Additional extra timer with two presets (eg basketball)
 - Goals (points, strikes) for each team
-- Extra Points/Shots for both teams
+- Two Extra Points/Shots for both teams
 - Period (half, quarter)
 - The names of the two teams
 - Penalties for hockey and similar games
