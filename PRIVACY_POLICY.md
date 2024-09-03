@@ -1,4 +1,9 @@
-# Privacy Policy
+---
+layout: page
+title: Privacy Policy
+permalink: /PRIVACY_POLICY/
+---
+
 ###### version 1.0 of This Agreement was created on June 11, 2021.
 
 ScoreBoard is an application for counting goals and a timer in sports games and outputting results to third-party streamer programs (OBS, WireCast, etc.).
@@ -12,4 +17,4 @@ We do not use or have access to your personal data, including all data related t
 
 ## Contact Us
 
-If you have any questions or concerns about our Privacy Policy, please [contact us](/support.html)
+If you have any questions or concerns about our Privacy Policy, please [contact us](/support/)
