@@ -63,7 +63,7 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
 	<iframe width="720" height="540" src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&amp;start=50" frameborder="0" allowfullscreen></iframe>
 </p>
 
-## An example of a finished scoreboard after setting it up in OBS
+## An example of a finished scorebug after setting it up in OBS
 <p align="center">
 	<img width="800" alt="Possible scoreboard template in OBS" src="/img/output_example.jpg">
 </p>
