@@ -39,8 +39,11 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
     </a>
 </p>
 
-> Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
-_For free version, watch the video instructions from start (at the bottom of this page)._
+>_Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)_  
+For use free version, watch the video instructions from start (at the bottom of this page).
+
+>_To open the **free** application in Sequoia, use the command in the terminal:_  
+```xattr -d com.apple.quarantine /Applications/ScoreBoard.app```
 
 <p align="center">
   <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png"><br>
