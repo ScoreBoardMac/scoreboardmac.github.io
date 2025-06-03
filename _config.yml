@@ -7,7 +7,7 @@ title: Sports scoreboard for streaming on Mac
 description: Broadcasts with statistics via OBS, WireCast, Streamlabs, etc.
 
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
 
 minima:
   skin: auto
