@@ -13,6 +13,6 @@ minima:
   skin: auto
 
 header_pages:
-  # - guides.md
+  - guides.md
   - PRIVACY_POLICY.md
   - support.md
