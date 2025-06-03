@@ -1,13 +1,13 @@
-#theme: jekyll-theme-cayman
+#theme: minima
+
+# новая версия в разработке выставил коммит на стабильную 2.5 версию (можно убрать @коммит)
+remote_theme: jekyll/minima@593a05a
 
 title: Sports scoreboard for streaming on Mac
 description: Broadcasts with statistics via OBS, WireCast, Streamlabs, etc.
 
 plugins:
   - jekyll-feed
-
-#theme: minima
-remote_theme: jekyll/minima
 
 minima:
   skin: auto
