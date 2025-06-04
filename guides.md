@@ -4,9 +4,10 @@ title: User Guide
 permalink: /guides/
 ---
 
-# List of tutorials for Scoreboard using OBS as an example
+# Tutorials on adding a Scoreboard to OBS (other programs are similar)
 - [Getting Started](#getting-started)
-- [How to add a text in OBS to read a local TXT file](#how-to-add-a-text-in-obs-to-read-a-local-txt-file)
+- [How to add a timer/counter in OBS](#how-to-add-a-text-in-obs-to-read-a-local-txt-file)
+- [How to add a Scorebug Background](#how-to-add-a-scorebug-background)
 
 ---
 
@@ -50,8 +51,7 @@ permalink: /guides/
 
 ---
 
-## How to add a text in OBS to read a local TXT file
-
+## How to add a text timer or counter in OBS
 
 ![](tutorial-img/how_add_text_to_obs.gif)
 
@@ -80,16 +80,45 @@ If you want to organize your setup, create a new scene:
 - Click the **Browse** button next to the file path field.  
 - Navigate to your local TXT file, select it, and click **Open**.
 
-### 7. Customize Appearance  
-- Use the **Font**, **Size**, and **Color** options to adjust the text style.  
-- Experiment with alignment, gradient, and background settings to fit your layout.
-
-### 8. Place the Text on the Canvas  
+### 7. Place the Text on the Canvas  
 - Drag the text box in the preview area to position it on your scene.  
 - Resize it as necessary.
+
+### 8. Customize Appearance  
+- Use the **Font**, **Size**, and **Color** options to adjust the text style.  
+- Experiment with alignment, gradient, and background settings to fit your layout.
 
 ### 9. Test File Updates  
 - Change the value of the counter in ScoreBoard, for example, start a timer.  
 - Verify that the changes appear in OBS in real-time.
+
+**Similarly, add and configure all the timers/counters needed for the sport scoreboard stream.**
+
+---
+
+## How to add a Scorebug background image in OBS
+
+![](tutorial-img/how_add_scoreboard_background_to_obs.gif)
+
+### 1. Add a Image source  
+- In the **Sources** section, click the **+** button.  
+- Select **Image** from the list.  
+*Or simply drag the desired image file from Finder into the OBS window.*
+
+### 2. Name your Image source  
+- Enter a descriptive name for the source (e.g., `Background`) and press **OK** button.  
+
+### 3. Select your Image file  
+- Click the **Browse** button next to the file path field.  
+- Navigate to your local img file, select it, and click **Open**.
+- Then click **OK** to save the source.
+
+### 4. Place the Image on the Canvas below the text layers  
+- Drag the image box in the preview area to position it on your scene.  
+- Resize it as necessary.
+- In the list of sources, move the background to the very bottom.
+
+*Example of background for scoreboard:*
+![](tutorial-img/DefaultScoreBoard.png)
 
 ---
