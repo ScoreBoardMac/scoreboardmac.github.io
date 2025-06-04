@@ -52,6 +52,9 @@ permalink: /guides/
 
 ## How to add a text in OBS to read a local TXT file
 
+
+![](tutorial-img/how_add_text_to_obs.gif)
+
 ### 1. Open OBS Studio  
 Launch OBS Studio on your computer.
 
@@ -90,4 +93,3 @@ If you want to organize your setup, create a new scene:
 - Verify that the changes appear in OBS in real-time.
 
 ---
-
