@@ -6,8 +6,9 @@ permalink: /guides/
 
 # Tutorials on adding a Scoreboard to OBS (other programs are similar)
 - [Getting Started](#getting-started)
-- [How to add a timer/counter in OBS](#how-to-add-a-text-in-obs-to-read-a-local-txt-file)
-- [How to add a Scorebug Background](#how-to-add-a-scorebug-background)
+- [How to add a timer/counter in OBS](#how-to-add-a-text-timer-or-counter-in-obs)
+- [How to add a Scorebug Background](#how-to-add-a-scorebug-background-image-in-obs)
+- [How to correctly display Tenths](#how-to-display-tenths-of-a-second-in-obs)
 
 ---
 
@@ -120,5 +121,57 @@ If you want to organize your setup, create a new scene:
 
 *Example of background for scoreboard:*
 ![](tutorial-img/DefaultScoreBoard.png)
+
+---
+
+## How to display tenths of a second in OBS
+
+*OBS by default reads text files approximately once per second. To display tenths correctly, you need to reduce this delay*
+
+![](tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
+
+### 1. Install the plugin [Advanced Scene Switcher](https://obsproject.com/forum/resources/advanced-scene-switcher.395/)
+  
+### 2. Open the plugin 
+- Main menu in OBS - Tools - Advanced Scene Switcher  
+- In the General tab set **Check conditions every** to **100ms**
+
+![](tutorial-img/AdvancedSceneSwitcher/Advanced_Scene_Switcher_General.png)
+
+### 3. Add a new Macro  
+- Click the **+** button in the bottom-left corner and rename the macro (e.g., “Timer Delay”)  
+- Uncheck **Perform actions only on condition change**  
+
+### 4. Add a new condition  
+- Click the **+** button in the conditions section  
+- Select **If**  
+- Choose **File**  
+- Click **Browse**  
+- Select the file "Timer.txt" (or another file) from the output directory of the ScoreBoard app  
+- Set the condition to **content changed**  
+
+### 5. Add a new action  
+- Click the **+** button in the actions section  
+- Select **Source**  
+- Choose **Set Settings**  
+- Select your FreeType 2 source (e.g., “Main Timer”)  
+- Set **Text(Text)**  
+- Choose **Set to macro property**  
+- Select **File content**
+
+![](tutorial-img/AdvancedSceneSwitcher/Advanced_Scene_Switcher_Macro.png)
+
+### 6. Change the text input mode for your timer source  
+- In OBS, double-click your FreeType 2 source in the Sources list (e.g., “Main Timer”)  
+- Change **Text input mode** to **Manual**  
+- Enter any placeholder text (e.g., a space) in the **Text** field  
+- Click **OK**
+
+![](tutorial-img/AdvancedSceneSwitcher/OBS_Property_FreeType2_manual.png) 
+
+### 7. Run the main timer in the ScoreBoard app and test  
+- In ScoreBoard settings, choose a style for the main timer (e.g., [:5.3] or [5.3])
+- For testing, set the timer in ScoreBoard to 1 minute (1:00)
+- Start the timer and check the result in OBS
 
 ---
