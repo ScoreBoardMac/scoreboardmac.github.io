@@ -1,5 +1,5 @@
 ---
-title: Scoreboard for Mac with statistics for sports broadcasts via OBS, Wirecast, Streamlabs etc.
+title: Scoreboard for sport stream in OBS, Wirecast, Streamlabs
 layout: home
 ---
 
@@ -11,14 +11,15 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
 	<img class="header-image" alt="Scoreboard for mac Main Screen" src="/img/scoreboard_for_mac_light.png">
 </p>
 
-## ScoreBoard allows you to keep statistics:
-- Time (timer or stopwatch)
+## The scoreboard can display in a sports broadcast:
+- Time (timer or stopwatch) with tenths
 - Additional extra timer with two presets (eg basketball)
 - Goals (points, strikes) for each team
 - Two Extra Points/Shots for both teams
 - Period (half, quarter)
 - The names of the two teams
-- Penalties for hockey and similar games
+- Descriptions/Statuses of two teams
+- Penalties with timers for hockey and similar games
 - Yellow and Red cards for soccer
 
 ### Additional features:
@@ -33,17 +34,25 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
 - Ability to add a suffix to the period (1st, 2nd, 3rd)
 - Ability to add zero to goals (01 - 05)
 
+## User Reviews
+
+NP2003 | djithm | TofuDunk
+--- | --- | ---
+I've been using this program since it was v1.0 on the OBS Forums - this is a fantastic program. | Excellent application that has all the tools required to use for your score bug in OBS. So much better than some of the paid subscriptions as long as you have the ability to create your own graphics for the scoreboard portion. Keep up the great work and I look forward to your updates! | This app has made it much easier for me to keep score during my board game streaming sessions.
+
 <p align="center">
     <a href="https://apps.apple.com/app/id1579159150" title="Download from Mac AppStore">
         <img alt="Download from Mac AppStore" src="/img/MacAppStore.png">
     </a>
 </p>
 
->_Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)_  
-For use free version, watch the video instructions from start (at the bottom of this page).
-
->_To open the **free** application in Sequoia, use the command in the terminal:_  
-```xattr -d com.apple.quarantine /Applications/ScoreBoard.app```
+> Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
+> For use free version, watch the [video instructions](#video-instructions-for-use) from start.
+>
+> To open the free application in Sequoia, use the command in the terminal:
+> ```bash
+> xattr -d com.apple.quarantine /Applications/ScoreBoard.app
+> ```
 
 <p align="center">
   <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png"><br>

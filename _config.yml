@@ -1,18 +1,29 @@
+# Это если использовать настройки gem и брать из гема
 #theme: minima
 
 # новая версия в разработке выставил коммит на стабильную 2.5 версию (можно убрать @коммит)
-remote_theme: jekyll/minima@593a05a
+#remote_theme: jekyll/minima@1e8a445
+remote_theme: jekyll/minima
 
 title: Sports scoreboard for streaming on Mac
-description: Broadcasts with statistics via OBS, WireCast, Streamlabs, etc.
-
-plugins:
-#  - jekyll-feed
+description: >
+  Sport broadcast with score bug statistics for 
+  OBS, Wirecast, Streamlabs and other
+#author:
+#  name: Vasily Petukhov
 
 minima:
   skin: auto
+  hide_site_feed_link: true
+  nav_pages:
+    - guides.md
+    - PRIVACY_POLICY.md
+    - support.md
 
-header_pages:
-  - guides.md
-  - PRIVACY_POLICY.md
-  - support.md
+#header_pages:
+#  - guides.md
+#  - PRIVACY_POLICY.md
+#  - support.md
+
+plugins:
+#  - jekyll-feed
