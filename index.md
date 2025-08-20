@@ -36,23 +36,15 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
 
 ## User Reviews
 
-NP2003 | djithm | TofuDunk
---- | --- | ---
-I've been using this program since it was v1.0 on the OBS Forums - this is a fantastic program. | Excellent application that has all the tools required to use for your score bug in OBS. So much better than some of the paid subscriptions as long as you have the ability to create your own graphics for the scoreboard portion. Keep up the great work and I look forward to your updates! | This app has made it much easier for me to keep score during my board game streaming sessions.
+NP2003 | djithm | TofuDunk | tiivonen
+--- | --- | --- | ---
+I've been using this program since it was v1.0 on the OBS Forums - this is a fantastic program. | Excellent application that has all the tools required to use for your score bug in OBS. So much better than some of the paid subscriptions as long as you have the ability to create your own graphics for the scoreboard portion. Keep up the great work and I look forward to your updates! | This app has made it much easier for me to keep score during my board game streaming sessions. | Simple and easy to use. I use it for floorball streaming. Original M1 mbpro handles scoreboard and streaming 1080p 50p around 10% CPU usage.
 
 <p align="center">
     <a href="https://apps.apple.com/app/id1579159150" title="Download from Mac AppStore">
         <img alt="Download from Mac AppStore" src="/img/MacAppStore.png">
     </a>
 </p>
-
-> Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
-> For use free version, watch the [video instructions](#video-instructions-for-use) from start.
->
-> To open the free application in Sequoia, use the command in the terminal:
-> ```bash
-> xattr -d com.apple.quarantine /Applications/ScoreBoard.app
-> ```
 
 <p align="center">
   <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png"><br>
