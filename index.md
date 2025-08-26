@@ -63,9 +63,9 @@ I've been using this program since it was v1.0 on the OBS Forums - this is a fan
 ## Video instructions for use
 _The OBS and ScoreBoard have already been updated several times, but the settings in the video are similar._
 
-<p align="center">
-	<iframe width="720" height="540" src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&amp;start=50" frameborder="0" allowfullscreen></iframe>
-</p>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&start=50" allowfullscreen></iframe>
+</div>
 
 ## An example of a finished scorebug after setting it up in OBS
 <p align="center">
@@ -88,5 +88,17 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
 	  .header-image {
 			content: url('/img/scoreboard_for_mac_dark.png');
 	  }
+	}
+	
+	.video-container {
+		width: 100%;
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	.video-container iframe {
+		width: 100%;
+		aspect-ratio: 4/3; /* или 16/9 для широкоформатных видео */
+		border: none;
 	}
 </style>
