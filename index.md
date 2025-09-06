@@ -34,7 +34,7 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
 - Ability to add a suffix to the period (1st, 2nd, 3rd)
 - Ability to add zero to goals (01 - 05)
 
-## User Reviews
+## What our users think
 
 NP2003 | djithm | TofuDunk | tiivonen
 --- | --- | --- | ---
@@ -45,6 +45,14 @@ I've been using this program since it was v1.0 on the OBS Forums - this is a fan
         <img alt="Download from Mac AppStore" src="/img/MacAppStore.png">
     </a>
 </p>
+
+> Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
+> For use free version, watch the [video instructions](#video-instructions-for-use) from start.
+>
+> To open the free application in Mac Sequoia, use the command in the terminal:
+> ```bash
+> xattr -d com.apple.quarantine /Applications/ScoreBoard.app
+> ```
 
 <p align="center">
   <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png"><br>
@@ -66,6 +74,7 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
 <div class="video-container">
   <iframe src="https://www.youtube.com/embed/dHj56FIE2ng?si=q62r_uccgddo2KXv&start=50" allowfullscreen></iframe>
 </div>
+
 
 ## An example of a finished scorebug after setting it up in OBS
 <p align="center">
