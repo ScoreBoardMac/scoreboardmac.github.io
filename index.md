@@ -46,10 +46,11 @@ I've been using this program since it was v1.0 on the OBS Forums - this is a fan
     </a>
 </p>
 
-> Old ScoreBoard **free version 0.5** (not in MacApp Store and for trial use): [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
-> For use free version, watch the [video instructions](#video-instructions-for-use) from start.
+## Old ScoreBoard free version
+> **Free version 0.5** not in MacApp Store and for trial use: [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
+> To use this version, watch the [video instructions](#video-instructions-for-use) from start.
 >
-> To open the free application in Mac Sequoia, use the command in the terminal:
+> To open the free application in Mac Sequoia+, use the command in the terminal:
 > ```bash
 > xattr -d com.apple.quarantine /Applications/ScoreBoard.app
 > ```
