@@ -35,7 +35,9 @@ permalink: /guides/
 ## How It Works  
 
 1. **Set Up the App**  
-   - Install the app on your macOS device [Mac App Store](https://apps.apple.com/us/app/scoreboard-for-obs-broadcasts/id1579159150?mt=12).  
+   - Install the Scoreboard for Mac on your computer:  
+      - [Buy in Mac App Store](https://apps.apple.com/app/id1579159150)  
+      - [Download the free version](/free-apps/ScoreBoard free.zip) and unzip it — notarized by Apple and safe to use  
    - Open the app and configure your teams/players names, and other initial settings.  
 
 2. **Update Scores in Real-Time**  

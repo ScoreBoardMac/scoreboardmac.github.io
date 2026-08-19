@@ -17,10 +17,11 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
 - Goals (points, strikes) for each team
 - Two Extra Points/Shots for both teams
 - Period (half, quarter)
-- The names of the two teams
-- Descriptions/Statuses of two teams
+- The names of the two teams and Match
+- Descriptions/Statuses/Promo of two teams and Match
 - Penalties with timers for hockey and similar games
 - Yellow and Red cards for soccer
+- Logos + Promo for two teams and Match 
 
 ### Additional features:
 - Hotkeys for easy control
@@ -46,27 +47,26 @@ I've been using this program since it was v1.0 on the OBS Forums - this is a fan
     </a>
 </p>
 
-## Old ScoreBoard free version
-> **Free version 0.5** not in MacApp Store and for trial use: [download](/free-old-apps/ScoreBoard-v0.5.dmg)  
-> To use this version, watch the [video instructions](#video-instructions-for-use) from start.
->
-> To open the free application in Mac Sequoia+, use the command in the terminal:
-> ```bash
-> xattr -d com.apple.quarantine /Applications/ScoreBoard.app
-> ```
-
+## ScoreBoard free version
+**Free version** for trial use: [download](/free-apps/ScoreBoard free.zip), unzip it, and move the app to your Applications folder.  
+The free version is fully functional, but text output is limited in some fields.  
+_Notarized and verified by Apple, safe to download and use on your Mac._
 <p align="center">
-  <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png"><br>
-  <img alt="Scoreboard mac Preferences Screen" width="800" alt="ScoreBoard txt files" src="/img/2_preferences_en.png"><br>
-  <img alt="Scoreboard mac Hotkeys Actions" width="800" alt="ScoreBoard txt files" src="/img/3_hotkeys_en.png"><br>
-  <img alt="Scoreboard mac output txt files" width="800" alt="ScoreBoard txt files" src="/img/4_txtFiles_en.png"><br>
+    <a href="/free-apps/ScoreBoard free.zip" title="Free download trial version">
+        <img alt="Free download trial version" src="/img/free-download.png">
+    </a>
 </p>
 
-
+## Screenshots of ScoreBoard and OBS
 <p align="center">
-    <a href="https://apps.apple.com/app/id1579159150" title="Download from Mac AppStore">
-        <img alt="Download from Mac AppStore" src="/img/MacAppStore.png">
-    </a>
+  <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png">
+  <br>
+  <img alt="Scoreboard mac Preferences Screen" width="800" alt="ScoreBoard txt files" src="/img/2_preferences_en.png">
+  <br>
+  <img alt="Scoreboard mac Hotkeys Actions" width="800" alt="ScoreBoard txt files" src="/img/3_hotkeys_en.png">
+  <br>
+  <img alt="Scoreboard mac output txt files" width="800" alt="ScoreBoard txt files" src="/img/4_txtFiles_en.png">
+  <br>
 </p>
 
 ## Video instructions for use
