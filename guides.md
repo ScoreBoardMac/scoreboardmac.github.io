@@ -9,6 +9,7 @@ permalink: /guides/
 - [How to add a timer/counter in OBS](#how-to-add-a-text-timer-or-counter-in-obs)
 - [How to add a Scorebug Background](#how-to-add-a-scorebug-background-image-in-obs)
 - [How to correctly display Tenths](#how-to-display-tenths-of-a-second-in-obs)
+- [How to add Team Rosters](#how-to-show-team-rosters-in-an-obs-broadcast)
 
 ---
 
@@ -177,3 +178,49 @@ If you want to organize your setup, create a new scene:
 - Start the timer and check the result in OBS
 
 ---
+
+## How to Show Team Rosters in an OBS Broadcast
+![](tutorial-img/RostersScoreBoard.png)
+
+### Image Source
+1. Create a graphic file (PDF or image) containing the team roster using any software you prefer.
+
+2. Add the graphic file to the home promo or away promo button in Scoreboard and make it visible.
+
+3. Add a Image Source in OBS for the Home_Promo.png or Away_Promo.png files.
+
+### Text Source
+1. Add a Text Source in OBS for the Home_Status.txt and Away_Status.txt files.
+
+2. Add the team roster to the Status field for each team in Scoreboard. For example:
+>#4   Erik Lindqvist  
+>#7   Marco Bianchi  
+>#9   Connor MacLeod  
+>#11  Lukas Weber  
+>#13  Tomas Novak  
+>#16  Henrik Andersson  
+>#19  Diego Fernandez  
+>#21  Kai Nakamura  
+>#23  Owen Fitzgerald  
+>#27  Niklas Berg  
+>#29  Marek Kowalski  
+>#33  Jesse Virtanen  
+>#44  Liam O'Brien  
+>#61  Pavel Dvorak  
+>#71  Anders Holm  
+>#88  Zach Whitfield  
+>#91  Miroslav Klimek  
+
+3. Add a background image or a solid-color Color Source.
+
+4. Group the text and background layers into a single group so you can control their visibility with one button.
+
+<!--### Источник pdf-->
+<!---->
+<!------->
+<!--## Как подающую команду Possession-->
+<!---->
+<!--## Как буллиты в OBS или другую информацию-->
+<!---->
+<!--## Как Замена игроков в футболе и схожем-->
+<!---->
