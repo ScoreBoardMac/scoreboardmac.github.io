@@ -1,6 +1,10 @@
 ---
 layout: page
 title: Support
+description: >
+  Get help with the ScoreBoard for Mac app: report bugs, request instructions,
+  or suggest new features for your OBS, Wirecast or Streamlabs sports scoreboard.
+image: /img/scoreboard_for_mac_light.png
 permalink: /support/
 ---
 

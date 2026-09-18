@@ -26,4 +26,5 @@ minima:
 #  - support.md
 
 plugins:
+  - jekyll-sitemap
 #  - jekyll-feed

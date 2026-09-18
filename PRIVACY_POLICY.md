@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Privacy Policy
+description: >
+  Privacy Policy for the ScoreBoard for Mac app: what data is collected (none)
+  and how the app handles access to files on your device.
 permalink: /PRIVACY_POLICY/
 ---
 

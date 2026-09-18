@@ -1,6 +1,10 @@
 ---
 layout: page
 title: User Guide
+description: >
+  Step-by-step tutorials for adding a ScoreBoard overlay to OBS: text timers, scorebug
+  backgrounds, tenths-of-a-second timers, and team rosters for live sports streams.
+image: /img/scoreboard_for_mac_light.png
 permalink: /guides/
 ---
 
@@ -38,7 +42,7 @@ permalink: /guides/
 1. **Set Up the App**  
    - Install the Scoreboard for Mac on your computer:  
       - [Buy in Mac App Store](https://apps.apple.com/app/id1579159150)  
-      - [Download the free version](/free-apps/ScoreBoard free.zip) and unzip it — notarized by Apple and safe to use  
+      - [Download the free version](/free-apps/ScoreBoard-free.zip) and unzip it — notarized by Apple and safe to use  
    - Open the app and configure your teams/players names, and other initial settings.  
 
 2. **Update Scores in Real-Time**  
@@ -57,7 +61,7 @@ permalink: /guides/
 
 ## How to add a text timer or counter in OBS
 
-![](tutorial-img/how_add_text_to_obs.gif)
+![Adding a text timer source linked to a ScoreBoard TXT file in OBS](tutorial-img/how_add_text_to_obs.gif)
 
 ### 1. Open OBS Studio  
 Launch OBS Studio on your computer.
@@ -102,7 +106,7 @@ If you want to organize your setup, create a new scene:
 
 ## How to add a Scorebug background image in OBS
 
-![](tutorial-img/how_add_scoreboard_background_to_obs.gif)
+![Adding a scorebug background image source in OBS](tutorial-img/how_add_scoreboard_background_to_obs.gif)
 
 ### 1. Add a Image source  
 - In the **Sources** section, click the **+** button.  
@@ -123,7 +127,7 @@ If you want to organize your setup, create a new scene:
 - In the list of sources, move the background to the very bottom.
 
 *Example of background for scoreboard:*
-![](tutorial-img/DefaultScoreBoard.png)
+![Example scorebug background template for a sports scoreboard](tutorial-img/DefaultScoreBoard.png)
 
 ---
 
@@ -131,7 +135,7 @@ If you want to organize your setup, create a new scene:
 
 *OBS by default reads text files approximately once per second. To display tenths correctly, you need to reduce this delay*
 
-![](tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
+![Displaying tenths of a second timer in OBS using Advanced Scene Switcher](tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
 ### 1. Install the plugin [Advanced Scene Switcher](https://obsproject.com/forum/resources/advanced-scene-switcher.395/)
   
@@ -139,7 +143,7 @@ If you want to organize your setup, create a new scene:
 - Main menu in OBS - Tools - Advanced Scene Switcher  
 - In the General tab set **Check conditions every** to **100ms**
 
-![](tutorial-img/AdvancedSceneSwitcher/Advanced_Scene_Switcher_General.png)
+![Advanced Scene Switcher General tab with check conditions interval set to 100ms](tutorial-img/AdvancedSceneSwitcher/Advanced_Scene_Switcher_General.png)
 
 ### 3. Add a new Macro  
 - Click the **+** button in the bottom-left corner and rename the macro (e.g., “Timer Delay”)  
@@ -162,7 +166,7 @@ If you want to organize your setup, create a new scene:
 - Choose **Set to macro property**  
 - Select **File content**
 
-![](tutorial-img/AdvancedSceneSwitcher/Advanced_Scene_Switcher_Macro.png)
+![Advanced Scene Switcher macro condition and action for updating the OBS text source](tutorial-img/AdvancedSceneSwitcher/Advanced_Scene_Switcher_Macro.png)
 
 ### 6. Change the text input mode for your timer source  
 - In OBS, double-click your FreeType 2 source in the Sources list (e.g., “Main Timer”)  
@@ -170,7 +174,7 @@ If you want to organize your setup, create a new scene:
 - Enter any placeholder text (e.g., a space) in the **Text** field  
 - Click **OK**
 
-![](tutorial-img/AdvancedSceneSwitcher/OBS_Property_FreeType2_manual.png) 
+![OBS FreeType 2 text source properties set to manual text input mode](tutorial-img/AdvancedSceneSwitcher/OBS_Property_FreeType2_manual.png) 
 
 ### 7. Run the main timer in the ScoreBoard app and test  
 - In ScoreBoard settings, choose a style for the main timer (e.g., [:5.3] or [5.3])
@@ -180,7 +184,7 @@ If you want to organize your setup, create a new scene:
 ---
 
 ## How to Show Team Rosters in an OBS Broadcast
-![](tutorial-img/RostersScoreBoard.png)
+![Team roster overlay shown alongside a ScoreBoard scorebug in OBS](tutorial-img/RostersScoreBoard.png)
 
 ### Image Source
 1. Create a graphic file (PDF or image) containing the team roster using any software you prefer.

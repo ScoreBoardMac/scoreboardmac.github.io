@@ -1,5 +1,9 @@
 ---
 title: Scoreboard for sport stream in OBS, Wirecast, Streamlabs
+description: >
+  Free-to-try macOS scoreboard app for OBS, Wirecast and Streamlabs. Show live score,
+  timer, penalties and team stats in your sports stream via simple TXT file overlays.
+image: /img/scoreboard_for_mac_light.png
 layout: home
 ---
 
@@ -48,24 +52,24 @@ I've been using this program since it was v1.0 on the OBS Forums - this is a fan
 </p>
 
 ## ScoreBoard free version
-**Free version** for trial use: [download](/free-apps/ScoreBoard free.zip), unzip it, and move the app to your Applications folder.  
+**Free version** for trial use: [download](/free-apps/ScoreBoard-free.zip), unzip it, and move the app to your Applications folder.  
 The free version is fully functional, but text output is limited in some fields.  
 _Notarized and verified by Apple, safe to download and use on your Mac._
 <p align="center">
-    <a href="/free-apps/ScoreBoard free.zip" title="Free download trial version">
+    <a href="/free-apps/ScoreBoard-free.zip" title="Free download trial version">
         <img alt="Free download trial version" src="/img/free-download.png">
     </a>
 </p>
 
 ## Screenshots of ScoreBoard and OBS
 <p align="center">
-  <img alt="Scoreboard mac Main Screen" width="800" alt="ScoreBoard txt files" src="/img/1_main_en.png">
+  <img alt="ScoreBoard for Mac main screen with live score and timer controls" width="800" src="/img/1_main_en.png">
   <br>
-  <img alt="Scoreboard mac Preferences Screen" width="800" alt="ScoreBoard txt files" src="/img/2_preferences_en.png">
+  <img alt="ScoreBoard for Mac preferences screen for customizing scoreboard output" width="800" src="/img/2_preferences_en.png">
   <br>
-  <img alt="Scoreboard mac Hotkeys Actions" width="800" alt="ScoreBoard txt files" src="/img/3_hotkeys_en.png">
+  <img alt="ScoreBoard for Mac hotkeys and Touch Bar actions for score control" width="800" src="/img/3_hotkeys_en.png">
   <br>
-  <img alt="Scoreboard mac output txt files" width="800" alt="ScoreBoard txt files" src="/img/4_txtFiles_en.png">
+  <img alt="ScoreBoard for Mac output TXT files used as OBS text sources" width="800" src="/img/4_txtFiles_en.png">
   <br>
 </p>
 
@@ -87,6 +91,24 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
 
 [Contact for support](/support/)\
 *Errors, requests and questions are accepted.*
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sports Scoreboard for OBS",
+  "description": "Sport broadcast with score bug statistics for OBS, Wirecast, Streamlabs and other.",
+  "url": "https://scoreboardmac.github.io/",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "macOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "9.99",
+    "priceCurrency": "USD",
+    "url": "https://apps.apple.com/app/id1579159150"
+  }
+}
+</script>
 
 <!--Styles-->
 <style>
