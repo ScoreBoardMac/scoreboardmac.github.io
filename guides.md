@@ -2,13 +2,14 @@
 layout: page
 title: User Guide
 description: >
-  Step-by-step tutorials for adding a ScoreBoard overlay to OBS: text timers, scorebug
-  backgrounds, tenths-of-a-second timers, and team rosters for live sports streams.
+  Step-by-step tutorials for adding a ScoreBoard overlay to OBS, Streamlabs, Wirecast
+  or Meld: text timers, scorebug backgrounds, tenths-of-a-second timers, and team rosters.
 image: /img/scoreboard_for_mac_light.png
 permalink: /guides/
 ---
 
-# Tutorials on adding a Scoreboard to OBS (other programs are similar)
+Tutorials on adding a Scoreboard to OBS — the same TXT/image file sources work the same way in Streamlabs, Wirecast and Meld.
+
 - [Getting Started](#getting-started)
 - [How to add a timer/counter in OBS](#how-to-add-a-text-timer-or-counter-in-obs)
 - [How to add a Scorebug Background](#how-to-add-a-scorebug-background-image-in-obs)
@@ -228,3 +229,40 @@ If you want to organize your setup, create a new scene:
 <!---->
 <!--## Как Замена игроков в футболе и схожем-->
 <!---->
+
+---
+
+Back to the [ScoreBoard for Mac overview](/) or [download the free trial](/free-apps/ScoreBoard-free.zip).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to add a text timer or counter in OBS",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Open OBS Studio", "text": "Launch OBS Studio on your computer." },
+    { "@type": "HowToStep", "position": 2, "name": "Create a New Scene (Optional)", "text": "Click the + button in the Scenes section, give your scene a name and save it." },
+    { "@type": "HowToStep", "position": 3, "name": "Add a Text Source", "text": "In the Sources section, click the + button and select Text (FreeType 2), or drag the desired text file from Finder into the OBS window." },
+    { "@type": "HowToStep", "position": 4, "name": "Name Your Text Source", "text": "Enter a descriptive name for the source and click OK to create it." },
+    { "@type": "HowToStep", "position": 5, "name": "Enable Reading from File", "text": "In the text source properties window, check the box labeled Read from File." },
+    { "@type": "HowToStep", "position": 6, "name": "Select Your TXT File", "text": "Click Browse next to the file path field, navigate to your local TXT file, select it, and click Open." },
+    { "@type": "HowToStep", "position": 7, "name": "Place the Text on the Canvas", "text": "Drag the text box in the preview area to position it on your scene and resize it as necessary." },
+    { "@type": "HowToStep", "position": 8, "name": "Customize Appearance", "text": "Use the Font, Size and Color options to adjust the text style." },
+    { "@type": "HowToStep", "position": 9, "name": "Test File Updates", "text": "Change the value of the counter in ScoreBoard and verify that the changes appear in OBS in real-time." }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to add a scorebug background image in OBS",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Add an Image source", "text": "In the Sources section, click the + button and select Image, or drag the desired image file from Finder into the OBS window." },
+    { "@type": "HowToStep", "position": 2, "name": "Name your Image source", "text": "Enter a descriptive name for the source and press OK." },
+    { "@type": "HowToStep", "position": 3, "name": "Select your Image file", "text": "Click Browse next to the file path field, navigate to your local image file, select it, click Open, then click OK to save the source." },
+    { "@type": "HowToStep", "position": 4, "name": "Place the Image below the text layers", "text": "Drag the image box in the preview area to position it, resize it as necessary, and move it to the very bottom in the list of sources." }
+  ]
+}
+</script>

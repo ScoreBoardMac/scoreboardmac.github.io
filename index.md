@@ -1,13 +1,13 @@
 ---
-title: Scoreboard for sport stream in OBS, Wirecast, Streamlabs
+title: Scoreboard App for OBS, Streamlabs, Wirecast & Meld
 description: >
-  Free-to-try macOS scoreboard app for OBS, Wirecast and Streamlabs. Show live score,
-  timer, penalties and team stats in your sports stream via simple TXT file overlays.
+  Free-to-try macOS scoreboard app for OBS, Streamlabs, Wirecast and Meld. Show live
+  score, timer, penalties and team stats in your sports stream via simple TXT file overlays.
 image: /img/scoreboard_for_mac_light.png
 layout: home
 ---
 
-A fully functional utility for displaying statistics in a sports stream via OBS, Wirecast, Streamlabs, etc. It will help display the statistics needed for a specific game over your video of online sports broadcasts.
+A fully functional utility for displaying statistics in a sports stream via OBS, Streamlabs, Wirecast, Meld and other streaming software that supports text/image file sources. It will help display the statistics needed for a specific game over your video of online sports broadcasts.
 
 Text data is written to TXT files on your computer's disk (by default, to the Downloads directory). Each file can be used in a streamer program (add source: text) and overlaid on any image of your scoreboard.
 
@@ -38,6 +38,8 @@ Text data is written to TXT files on your computer's disk (by default, to the Do
 - Controls in the Touch Bar
 - Ability to add a suffix to the period (1st, 2nd, 3rd)
 - Ability to add zero to goals (01 - 05)
+
+New to the app? Follow the step-by-step [setup guides](/guides/) to add your first scorebug in OBS.
 
 ## What our users think
 
@@ -86,6 +88,20 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
 	<img width="800" alt="Possible scoreboard template in OBS" src="/img/output_example.jpg">
 </p>
 
+## FAQ
+
+**Does ScoreBoard work with Streamlabs, Wirecast and Meld?**  
+Yes. ScoreBoard writes live score, timer and stats data to TXT files (and promo/logo images) on disk, which any streaming software that supports text-file or image-file sources — including OBS, Streamlabs, Wirecast and Meld — can read and display as an overlay.
+
+**Is there a free version?**  
+Yes, a [free trial version](/free-apps/ScoreBoard-free.zip) is available for download, notarized and verified by Apple. It's fully functional, with output limited in some fields. The full version is available on the [Mac App Store](https://apps.apple.com/app/id1579159150).
+
+**What format does ScoreBoard output data in?**  
+Plain TXT files for text values (score, timer, team names, etc.) and image files for team/match logos and promo graphics, updated automatically as you control the game from the app.
+
+**Does ScoreBoard require an internet connection or account?**  
+No. ScoreBoard runs entirely locally on your Mac and does not collect any data — see the [Privacy Policy](/PRIVACY_POLICY/).
+
 ## Other
 [PRIVACY POLICY](/PRIVACY_POLICY/)
 
@@ -97,7 +113,7 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Sports Scoreboard for OBS",
-  "description": "Sport broadcast with score bug statistics for OBS, Wirecast, Streamlabs and other.",
+  "description": "Sport broadcast with score bug statistics for OBS, Streamlabs, Wirecast, Meld and other.",
   "url": "https://scoreboardmac.github.io/",
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "macOS",
@@ -106,7 +122,75 @@ _The OBS and ScoreBoard have already been updated several times, but the setting
     "price": "9.99",
     "priceCurrency": "USD",
     "url": "https://apps.apple.com/app/id1579159150"
-  }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "44"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "NP2003" },
+      "reviewBody": "I've been using this program since it was v1.0 on the OBS Forums - this is a fantastic program."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "djithm" },
+      "reviewBody": "Excellent application that has all the tools required to use for your score bug in OBS. So much better than some of the paid subscriptions as long as you have the ability to create your own graphics for the scoreboard portion. Keep up the great work and I look forward to your updates!"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "TofuDunk" },
+      "reviewBody": "This app has made it much easier for me to keep score during my board game streaming sessions."
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "tiivonen" },
+      "reviewBody": "Simple and easy to use. I use it for floorball streaming. Original M1 mbpro handles scoreboard and streaming 1080p 50p around 10% CPU usage."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does ScoreBoard work with Streamlabs, Wirecast and Meld?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ScoreBoard writes live score, timer and stats data to TXT files (and promo/logo images) on disk, which any streaming software that supports text-file or image-file sources — including OBS, Streamlabs, Wirecast and Meld — can read and display as an overlay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a free trial version is available for download, notarized and verified by Apple. It's fully functional, with output limited in some fields. The full version is available on the Mac App Store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What format does ScoreBoard output data in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plain TXT files for text values (score, timer, team names, etc.) and image files for team/match logos and promo graphics, updated automatically as you control the game from the app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ScoreBoard require an internet connection or account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ScoreBoard runs entirely locally on your Mac and does not collect any data."
+      }
+    }
+  ]
 }
 </script>
 

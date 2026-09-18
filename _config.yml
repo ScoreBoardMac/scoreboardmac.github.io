@@ -5,10 +5,10 @@
 #remote_theme: jekyll/minima@1e8a445
 remote_theme: jekyll/minima
 
-title: Sports scoreboard for streaming on Mac
+title: ScoreBoard for Mac
 description: >
-  Sport broadcast with score bug statistics for 
-  OBS, Wirecast, Streamlabs and other
+  Sports scoreboard app for streaming on Mac: live score, timer and stats overlays
+  for OBS, Streamlabs, Wirecast and Meld.
 #author:
 #  name: Vasily Petukhov
 

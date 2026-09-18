@@ -3,7 +3,7 @@ layout: page
 title: Support
 description: >
   Get help with the ScoreBoard for Mac app: report bugs, request instructions,
-  or suggest new features for your OBS, Wirecast or Streamlabs sports scoreboard.
+  or suggest new features for your OBS, Streamlabs, Wirecast or Meld sports scoreboard.
 image: /img/scoreboard_for_mac_light.png
 permalink: /support/
 ---
@@ -38,6 +38,8 @@ permalink: /support/
 		
 		<button type="submit">Send</button>
 	</form>
+
+	<p><a href="/">Back to ScoreBoard for Mac</a></p>
 </div>
 
 
