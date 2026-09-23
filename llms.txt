@@ -1,0 +1,17 @@
+# ScoreBoard for Mac
+
+> Free-to-try macOS app that shows a live sports scoreboard (score, timer, penalties, team stats) as TXT/image file overlays for OBS Studio, Streamlabs, Wirecast and Meld.
+
+ScoreBoard for Mac lets streamers and broadcasters display a live-updating scorebug in any streaming software that supports text-file or image-file sources. The app writes score, timer, period, penalty and roster data to local TXT files, and team/match logos and promo graphics to image files, which OBS (and similar tools) read as Text and Image sources. It runs fully locally, with no account or internet connection required.
+
+## Product
+- [Overview, features and download](https://scoreboardmac.github.io/): what the scoreboard can display, free vs paid version, Mac App Store link, user FAQ
+- [Free trial download](https://scoreboardmac.github.io/free-apps/ScoreBoard-free.zip): notarized by Apple, fully functional with limited text output in some fields
+- [Mac App Store listing](https://apps.apple.com/app/id1579159150): full paid version, $9.99
+
+## Guides
+- [Setup guides](https://scoreboardmac.github.io/guides/): step-by-step tutorials for OBS — adding a text timer/counter, adding a scorebug background image, displaying tenths of a second (via Advanced Scene Switcher), showing team rosters, and a tutorial-specific FAQ
+
+## Support
+- [Support / contact form](https://scoreboardmac.github.io/support/): report bugs, request help, suggest features
+- [Privacy Policy](https://scoreboardmac.github.io/PRIVACY_POLICY/): no data collection, runs locally

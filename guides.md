@@ -10,11 +10,31 @@ permalink: /guides/
 
 Tutorials on adding a Scoreboard to OBS — the same TXT/image file sources work the same way in Streamlabs, Wirecast and Meld.
 
+- [FAQ](#faq)
 - [Getting Started](#getting-started)
 - [How to add a timer/counter in OBS](#how-to-add-a-text-timer-or-counter-in-obs)
 - [How to add a Scorebug Background](#how-to-add-a-scorebug-background-image-in-obs)
 - [How to correctly display Tenths](#how-to-display-tenths-of-a-second-in-obs)
 - [How to add Team Rosters](#how-to-show-team-rosters-in-an-obs-broadcast)
+
+---
+
+## FAQ
+
+**How do I add a live sports scoreboard to OBS on Mac?**  
+Install ScoreBoard for Mac, then add its output TXT files as *Text (FreeType 2)* sources and its promo/logo images as *Image* sources in OBS — see [Getting Started](#getting-started) below.
+
+**Why doesn't my OBS text source update instantly?**  
+By default OBS re-reads text files about once per second. For faster or sub-second updates (e.g. tenths of a second on a timer), use the Advanced Scene Switcher plugin — see [How to display tenths of a second](#how-to-display-tenths-of-a-second-in-obs).
+
+**Can I show team rosters or a lineup overlay in my stream?**  
+Yes — add the roster as text in a team's Status field and/or as an image via the promo buttons, then show it with Text and Image sources in OBS — see [How to show team rosters](#how-to-show-team-rosters-in-an-obs-broadcast).
+
+**Does this work in Streamlabs, Wirecast or Meld instead of OBS?**  
+Yes. ScoreBoard outputs plain TXT and image files, which any streaming software with text-file or image-file sources can read the same way OBS does.
+
+**Do I need a scorebug background image, or can I use text sources alone?**  
+Either works. Text sources alone show live values; adding a background/scorebug image behind them (see [How to add a Scorebug Background](#how-to-add-a-scorebug-background-image-in-obs)) gives it a designed look.
 
 ---
 
@@ -233,6 +253,55 @@ If you want to organize your setup, create a new scene:
 ---
 
 Back to the [ScoreBoard for Mac overview](/) or [download the free trial](/free-apps/ScoreBoard-free.zip).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add a live sports scoreboard to OBS on Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Install ScoreBoard for Mac, then add its output TXT files as Text (FreeType 2) sources and its promo/logo images as Image sources in OBS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why doesn't my OBS text source update instantly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default OBS re-reads text files about once per second. For faster or sub-second updates, such as tenths of a second on a timer, use the Advanced Scene Switcher plugin to shorten the check interval and push file content into the text source."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I show team rosters or a lineup overlay in my stream?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Add the roster as text in a team's Status field and/or as an image via the promo buttons in ScoreBoard, then display it with Text and Image sources in OBS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work in Streamlabs, Wirecast or Meld instead of OBS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ScoreBoard outputs plain TXT and image files, which any streaming software with text-file or image-file sources can read the same way OBS does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a scorebug background image, or can I use text sources alone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either works. Text sources alone show live values; adding a background or scorebug image behind them gives the overlay a designed look."
+      }
+    }
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
