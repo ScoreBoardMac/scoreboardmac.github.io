@@ -12,6 +12,7 @@ Tutorials on adding a Scoreboard to OBS — the same TXT/image file sources work
 
 - [FAQ](#faq)
 - [Getting Started](#getting-started)
+- [Output text and image files](#output-text-and-image-files)
 - [How to add a timer/counter in OBS](#how-to-add-a-text-timer-or-counter-in-obs)
 - [How to add a Scorebug Background](#how-to-add-a-scorebug-background-image-in-obs)
 - [How to correctly display Tenths](#how-to-display-tenths-of-a-second-in-obs)
@@ -77,6 +78,41 @@ Either works. Text sources alone show live values; adding a background/scorebug 
 
 4. **Stream or Record**  
    - As you update scores in the Scoreboard app, the changes are reflected in OBS in real-time. OBS will automatically read the files from the disk (approximately once per second) and display the result.  
+
+---
+
+## Output text and image files
+
+By default ScoreBoard writes these files to `Downloads/ScoreBoard Outputs` (choose a different output directory in Preferences). Each `.txt` file updates live as you control the game and is meant to be added as a **Text (FreeType 2)** source in OBS; each `.png` file is meant to be added as an **Image** source — see [Getting Started](#getting-started) above.
+
+### Text files
+
+| File | Content | Example |
+|---|---|---|
+| `Timer.txt` | Main game timer/stopwatch | `12:45` |
+| `Timer_Extra.txt` | Extra timer with two presets (e.g. a shot clock) | `14` |
+| `Home_Name.txt` / `Away_Name.txt` | Team names | `Eagles` |
+| `Match_Name.txt` | Match/event name | `Semifinal` |
+| `Period.txt` | Current period/quarter/half (also OT, 2OT, 3OT…) | `2nd` |
+| `Home_Goal.txt` / `Away_Goal.txt` | Main score (goals/points) for each team | `3` |
+| `Home_Shots.txt` / `Away_Shots.txt` | Extra shots counter for each team | `18` |
+| `Home_Points.txt` / `Away_Points.txt` | Extra points counter for each team | `2` |
+| `Home_Status.txt` / `Away_Status.txt` | Team description/status text — also used for [team rosters](#how-to-show-team-rosters-in-an-obs-broadcast) | `#9 J. Smith` |
+| `Match_Status.txt` | Match description/status text | `Final` |
+| `Home_Penalties_Numbers.txt` / `Away_Penalties_Numbers.txt` | Player numbers currently serving penalties, one per line | `12` |
+| `Home_Penalties_Timers.txt` / `Away_Penalties_Timers.txt` | Time remaining on each active penalty, one per line | `1:32` |
+| `NHL_Penalties_Title.txt` | Power-play situation label for the shortest active penalty | `5 ON 4` |
+| `NHL_Penalties_Time.txt` | Time remaining on the shortest active penalty | `1:32` |
+
+### Image files
+
+| File | Content |
+|---|---|
+| `Home_Logo.png` / `Away_Logo.png` / `Match_Logo.png` | Team/match logo |
+| `Home_Promo.png` / `Away_Promo.png` / `Match_Promo.png` | Promo graphic, e.g. a team roster image |
+| `Home_Penalty_Card.png` / `Away_Penalty_Card.png` | Yellow/red penalty card graphic |
+
+Not every file matters for every sport — shots and points are independent counters you can rename to fit your sport, and the two NHL penalty files only update while a penalty is active.
 
 ---
 
