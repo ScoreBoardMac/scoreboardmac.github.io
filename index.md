@@ -1,5 +1,5 @@
 ---
-title: Scoreboard App for OBS, Streamlabs, Wirecast & Meld
+title: Scoreboard for OBS, Streamlabs, Wirecast & Meld
 description: >
   Free-to-try macOS scoreboard app for OBS, Streamlabs, Wirecast and Meld. Show live
   score, timer, penalties and team stats in your sports stream via simple TXT file overlays.
