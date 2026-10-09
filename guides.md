@@ -1,4 +1,6 @@
 ---
+lang: en
+ref: guides
 layout: page
 title: User Guide
 description: >

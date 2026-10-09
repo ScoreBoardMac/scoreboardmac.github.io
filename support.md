@@ -1,4 +1,6 @@
 ---
+lang: en
+ref: support
 layout: page
 title: Support
 description: >

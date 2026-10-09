@@ -1,0 +1,14 @@
+{%- comment -%} hreflang-ссылки на все переводы текущей страницы (связь по page.ref) {%- endcomment -%}
+{%- if page.ref -%}
+  {%- assign translations = site.pages | where: "ref", page.ref -%}
+  {%- for t in translations %}
+<link rel="alternate" hreflang="{{ t.lang | default: site.lang }}" href="{{ t.url | absolute_url }}">
+    {%- if t.lang == site.lang %}
+<link rel="alternate" hreflang="x-default" href="{{ t.url | absolute_url }}">
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif %}
+<style>
+  .lang-switch a, .lang-switch strong { margin-left: 4px; }
+  .lang-switch strong { font-weight: 600; }
+</style>

@@ -3,8 +3,13 @@
 
 # новая версия в разработке выставил коммит на стабильную 2.5 версию (можно убрать @коммит)
 #remote_theme: jekyll/minima@1e8a445
-remote_theme: jekyll/minima
+# Закреплено на коммите: header.html и footer.html переопределены для мультиязычности,
+# обновление темы может их сломать — обновлять коммит осознанно.
+remote_theme: jekyll/minima@4de322363fca5927e6f4012cb94f6dad69ab5e6c
 
+lang: en
+
+url: https://scoreboardmac.github.io
 title: ScoreBoard for Mac Streaming
 description: >
   Sports scoreboard app for streaming on Mac: live score, timer and stats overlays

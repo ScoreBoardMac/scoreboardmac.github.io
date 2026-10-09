@@ -1,0 +1,13 @@
+{%- comment -%}
+  Скриншот приложения на языке страницы: /img/<name>_<lang>.png,
+  если такого файла нет — /img/<name>_en.png.
+  Параметры: name (например, 1_main), alt.
+  Пример: {% include screenshot.html name="1_main" alt="..." %}
+{%- endcomment -%}
+{%- assign shot_lang = page.lang | default: site.lang | default: "en" -%}
+{%- assign shot_src = "/img/" | append: include.name | append: "_" | append: shot_lang | append: ".png" -%}
+{%- assign shot_found = site.static_files | where: "path", shot_src | first -%}
+{%- unless shot_found -%}
+  {%- assign shot_src = "/img/" | append: include.name | append: "_en.png" -%}
+{%- endunless -%}
+<img alt="{{ include.alt | escape }}" width="800" src="{{ shot_src | relative_url }}">

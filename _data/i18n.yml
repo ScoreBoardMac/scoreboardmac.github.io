@@ -1,0 +1,15 @@
+# Языки сайта в порядке отображения в переключателе.
+# code — значение page.lang и hreflang, label — короткая подпись, name — самоназвание языка.
+languages:
+  - code: en
+    label: EN
+    name: English
+  - code: ru
+    label: RU
+    name: Русский
+
+# Описание сайта в подвале на каждом языке (fallback — site.description).
+description:
+  ru: >
+    Приложение-табло для спортивных трансляций на Mac: счёт, таймер и статистика
+    поверх видео в OBS, Streamlabs, Wirecast и Meld.

@@ -1,0 +1,47 @@
+{%- comment -%}
+  Переопределение header.html из minima: меню и ссылка на главную берутся
+  на языке текущей страницы (связь переводов — по page.ref), плюс переключатель языков.
+{%- endcomment -%}
+{%- assign cur_lang = page.lang | default: site.lang | default: "en" -%}
+{%- assign home = site.pages | where: "ref", "home" | where: "lang", cur_lang | first -%}
+<header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{ home.url | default: '/' | relative_url }}">{{ site.title | escape }}</a>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon"></span>
+      </label>
+
+      <div class="nav-items">
+        {%- for path in site.minima.nav_pages -%}
+          {%- assign base = site.pages | where: "path", path | first -%}
+          {%- assign target = nil -%}
+          {%- if base.ref -%}
+            {%- assign target = site.pages | where: "ref", base.ref | where: "lang", cur_lang | first -%}
+          {%- endif -%}
+          {%- assign target = target | default: base -%}
+          {%- if target.title %}
+        <a class="nav-item" href="{{ target.url | relative_url }}">{{ target.nav_title | default: target.title | escape }}</a>
+          {%- endif -%}
+        {%- endfor %}
+        {%- if page.ref %}
+        <span class="nav-item lang-switch">
+          {%- for l in site.data.i18n.languages -%}
+            {%- assign alt = site.pages | where: "ref", page.ref | where: "lang", l.code | first -%}
+            {%- if alt -%}
+              {%- if l.code == cur_lang %}
+          <strong title="{{ l.name }}">{{ l.label }}</strong>
+              {%- else %}
+          <a href="{{ alt.url | relative_url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" title="{{ l.name }}">{{ l.label }}</a>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor %}
+        </span>
+        {%- endif %}
+      </div>
+    </nav>
+  </div>
+</header>
