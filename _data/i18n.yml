@@ -1,5 +1,7 @@
 # Языки сайта в порядке отображения в переключателе.
-# code — значение page.lang и hreflang, label — короткая подпись, name — самоназвание языка.
+# code — значение page.lang и hreflang (BCP 47), label — короткая подпись, name — самоназвание языка,
+# img — суффикс скриншотов img/<name>_<img>.png (по умолчанию = code).
+# Папка языка в адресе — code в нижнем регистре (/zh-hans/).
 languages:
   - code: en
     label: EN
@@ -7,9 +9,33 @@ languages:
   - code: ru
     label: RU
     name: Русский
+  - code: de
+    label: DE
+    name: Deutsch
+  - code: fr
+    label: FR
+    name: Français
+  - code: es
+    label: ES
+    name: Español
+  - code: zh-Hans
+    label: 中文
+    name: 简体中文
+    img: zh
 
 # Описание сайта в подвале на каждом языке (fallback — site.description).
 description:
   ru: >
     Приложение-табло для спортивных трансляций на Mac: счёт, таймер и статистика
     поверх видео в OBS, Streamlabs, Wirecast и Meld.
+  de: >
+    Sport-Scoreboard-App für Streaming auf dem Mac: Live-Spielstand, Timer und Statistiken
+    als Overlay für OBS, Streamlabs, Wirecast und Meld.
+  fr: >
+    Application de tableau de score sportif pour le streaming sur Mac : score en direct, chrono
+    et statistiques en surimpression pour OBS, Streamlabs, Wirecast et Meld.
+  es: >
+    App de marcador deportivo para streaming en Mac: marcador en vivo, cronómetro y estadísticas
+    superpuestos en OBS, Streamlabs, Wirecast y Meld.
+  zh-Hans: >
+    Mac 体育直播记分牌应用：为 OBS、Streamlabs、Wirecast 和 Meld 叠加实时比分、计时器和统计数据。

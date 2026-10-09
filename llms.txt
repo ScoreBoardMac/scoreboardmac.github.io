@@ -17,4 +17,9 @@ ScoreBoard for Mac lets streamers and broadcasters display a live-updating score
 - [Privacy Policy](https://scoreboardmac.github.io/PRIVACY_POLICY/): no data collection, runs locally
 
 ## Other languages
-- [Русская версия (Russian)](https://scoreboardmac.github.io/ru/): overview, [guides](https://scoreboardmac.github.io/ru/guides/), [support](https://scoreboardmac.github.io/ru/support/), [privacy policy](https://scoreboardmac.github.io/ru/privacy/)
+Each language has an overview, guides, support and privacy policy page (`/<lang>/`, `/<lang>/guides/`, `/<lang>/support/`, `/<lang>/privacy/`):
+- [Русский (Russian)](https://scoreboardmac.github.io/ru/)
+- [Deutsch (German)](https://scoreboardmac.github.io/de/)
+- [Français (French)](https://scoreboardmac.github.io/fr/)
+- [Español (Spanish)](https://scoreboardmac.github.io/es/)
+- [简体中文 (Simplified Chinese)](https://scoreboardmac.github.io/zh-hans/)
