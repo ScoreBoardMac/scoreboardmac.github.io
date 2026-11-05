@@ -1,8 +1,8 @@
 {%- comment -%}
   Скриншот приложения на языке страницы: /img/<name>_<суффикс>.png (суффикс — img или code из _data/i18n.yml),
   если такого файла нет — /img/<name>_en.png.
-  Параметры: name (например, 1_main), alt.
-  Пример: {% include screenshot.html name="1_main" alt="..." %}
+  Параметры: name (например, 1_Main), alt.
+  Пример: {% include screenshot.html name="1_Main" alt="..." %}
 {%- endcomment -%}
 {%- assign shot_lang = page.lang | default: site.lang | default: "en" -%}
 {%- assign shot_cfg = site.data.i18n.languages | where: "code", shot_lang | first -%}

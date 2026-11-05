@@ -67,13 +67,15 @@ _Notarized and verified by Apple, safe to download and use on your Mac._
 
 ## Screenshots of ScoreBoard and OBS
 <p align="center">
-  <img alt="ScoreBoard for Mac main screen with live score and timer controls" width="800" src="/img/1_main_en.png">
+  <img alt="ScoreBoard for Mac main screen with live score and timer controls" width="800" src="/img/1_Main_en.png">
   <br>
-  <img alt="ScoreBoard for Mac preferences screen for customizing scoreboard output" width="800" src="/img/2_preferences_en.png">
+  <img alt="ScoreBoard for Mac preferences screen for customizing scoreboard output" width="800" src="/img/2_Settings_en.png">
   <br>
-  <img alt="ScoreBoard for Mac hotkeys and Touch Bar actions for score control" width="800" src="/img/3_hotkeys_en.png">
+  <img alt="ScoreBoard for Mac hotkeys and Touch Bar actions for score control" width="800" src="/img/3_Hotkeys_en.png">
   <br>
-  <img alt="ScoreBoard for Mac output TXT files used as OBS text sources" width="800" src="/img/4_txtFiles_en.png">
+  <img alt="ScoreBoard for Mac output TXT files used as OBS text sources" width="800" src="/img/4_Files_en.png">
+  <br>
+  <img alt="ScoreBoard for Mac WebSocket connection settings for live data in OBS, Streamlabs, Meld and DataLink" width="800" src="/img/5_WebSockets_en.png">
   <br>
 </p>
 

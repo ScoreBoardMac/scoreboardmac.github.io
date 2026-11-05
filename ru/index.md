@@ -70,13 +70,15 @@ _Приложение нотаризовано и проверено Apple — �
 
 ## Скриншоты ScoreBoard и OBS
 <p align="center">
-  {% include screenshot.html name="1_main" alt="Главный экран ScoreBoard для Mac с управлением счётом и таймером" %}
+  {% include screenshot.html name="1_Main" alt="Главный экран ScoreBoard для Mac с управлением счётом и таймером" %}
   <br>
-  {% include screenshot.html name="2_preferences" alt="Окно настроек ScoreBoard для Mac для настройки вывода табло" %}
+  {% include screenshot.html name="2_Settings" alt="Окно настроек ScoreBoard для Mac для настройки вывода табло" %}
   <br>
-  {% include screenshot.html name="3_hotkeys" alt="Горячие клавиши и действия Touch Bar в ScoreBoard для Mac" %}
+  {% include screenshot.html name="3_Hotkeys" alt="Горячие клавиши и действия Touch Bar в ScoreBoard для Mac" %}
   <br>
-  {% include screenshot.html name="4_txtFiles" alt="Выходные TXT-файлы ScoreBoard для Mac как текстовые источники в OBS" %}
+  {% include screenshot.html name="4_Files" alt="Выходные TXT-файлы ScoreBoard для Mac как текстовые источники в OBS" %}
+  <br>
+  {% include screenshot.html name="5_WebSockets" alt="Настройка подключения ScoreBoard для Mac по WebSocket для передачи данных в OBS, Streamlabs, Meld и DataLink" %}
   <br>
 </p>
 

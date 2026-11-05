@@ -70,13 +70,15 @@ _Notarizada y verificada por Apple: es segura para descargar y usar en tu Mac._
 
 ## Capturas de pantalla de ScoreBoard y OBS
 <p align="center">
-  {% include screenshot.html name="1_main" alt="Pantalla principal de ScoreBoard para Mac con controles de marcador y cronómetro" %}
+  {% include screenshot.html name="1_Main" alt="Pantalla principal de ScoreBoard para Mac con controles de marcador y cronómetro" %}
   <br>
-  {% include screenshot.html name="2_preferences" alt="Preferencias de ScoreBoard para Mac para personalizar la salida del marcador" %}
+  {% include screenshot.html name="2_Settings" alt="Preferencias de ScoreBoard para Mac para personalizar la salida del marcador" %}
   <br>
-  {% include screenshot.html name="3_hotkeys" alt="Atajos de teclado y acciones de la Touch Bar en ScoreBoard para Mac" %}
+  {% include screenshot.html name="3_Hotkeys" alt="Atajos de teclado y acciones de la Touch Bar en ScoreBoard para Mac" %}
   <br>
-  {% include screenshot.html name="4_txtFiles" alt="Archivos TXT de salida de ScoreBoard para Mac usados como fuentes de texto en OBS" %}
+  {% include screenshot.html name="4_Files" alt="Archivos TXT de salida de ScoreBoard para Mac usados como fuentes de texto en OBS" %}
+  <br>
+  {% include screenshot.html name="5_WebSockets" alt="Ajustes de conexión WebSocket de ScoreBoard para Mac para datos en vivo en OBS, Streamlabs, Meld y DataLink" %}
   <br>
 </p>
 

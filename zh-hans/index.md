@@ -70,13 +70,15 @@ _已通过 Apple 公证和验证，可放心在 Mac 上下载和使用。_
 
 ## ScoreBoard 和 OBS 截图
 <p align="center">
-  {% include screenshot.html name="1_main" alt="ScoreBoard for Mac 主界面，包含比分和计时器控制" %}
+  {% include screenshot.html name="1_Main" alt="ScoreBoard for Mac 主界面，包含比分和计时器控制" %}
   <br>
-  {% include screenshot.html name="2_preferences" alt="ScoreBoard for Mac 偏好设置，用于自定义记分牌输出" %}
+  {% include screenshot.html name="2_Settings" alt="ScoreBoard for Mac 偏好设置，用于自定义记分牌输出" %}
   <br>
-  {% include screenshot.html name="3_hotkeys" alt="ScoreBoard for Mac 的快捷键和触控栏操作" %}
+  {% include screenshot.html name="3_Hotkeys" alt="ScoreBoard for Mac 的快捷键和触控栏操作" %}
   <br>
-  {% include screenshot.html name="4_txtFiles" alt="ScoreBoard for Mac 输出的 TXT 文件在 OBS 中用作文本来源" %}
+  {% include screenshot.html name="4_Files" alt="ScoreBoard for Mac 输出的 TXT 文件在 OBS 中用作文本来源" %}
+  <br>
+  {% include screenshot.html name="5_WebSockets" alt="ScoreBoard for Mac 的 WebSocket 连接设置，向 OBS、Streamlabs、Meld 和 DataLink 实时发送数据" %}
   <br>
 </p>
 

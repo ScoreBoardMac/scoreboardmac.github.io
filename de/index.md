@@ -70,13 +70,15 @@ _Von Apple notarisiert und geprüft – sicher herunterzuladen und auf deinem Ma
 
 ## Screenshots von ScoreBoard und OBS
 <p align="center">
-  {% include screenshot.html name="1_main" alt="Hauptfenster von ScoreBoard für Mac mit Steuerung für Spielstand und Timer" %}
+  {% include screenshot.html name="1_Main" alt="Hauptfenster von ScoreBoard für Mac mit Steuerung für Spielstand und Timer" %}
   <br>
-  {% include screenshot.html name="2_preferences" alt="Einstellungen von ScoreBoard für Mac zum Anpassen der Scoreboard-Ausgabe" %}
+  {% include screenshot.html name="2_Settings" alt="Einstellungen von ScoreBoard für Mac zum Anpassen der Scoreboard-Ausgabe" %}
   <br>
-  {% include screenshot.html name="3_hotkeys" alt="Tastenkürzel und Touch-Bar-Aktionen in ScoreBoard für Mac" %}
+  {% include screenshot.html name="3_Hotkeys" alt="Tastenkürzel und Touch-Bar-Aktionen in ScoreBoard für Mac" %}
   <br>
-  {% include screenshot.html name="4_txtFiles" alt="Ausgegebene TXT-Dateien von ScoreBoard für Mac als Textquellen in OBS" %}
+  {% include screenshot.html name="4_Files" alt="Ausgegebene TXT-Dateien von ScoreBoard für Mac als Textquellen in OBS" %}
+  <br>
+  {% include screenshot.html name="5_WebSockets" alt="WebSocket-Verbindungseinstellungen von ScoreBoard für Mac für Live-Daten in OBS, Streamlabs, Meld und DataLink" %}
   <br>
 </p>
 

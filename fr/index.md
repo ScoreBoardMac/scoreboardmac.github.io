@@ -70,13 +70,15 @@ _Notariée et vérifiée par Apple : vous pouvez la télécharger et l'utiliser 
 
 ## Captures d'écran de ScoreBoard et d'OBS
 <p align="center">
-  {% include screenshot.html name="1_main" alt="Écran principal de ScoreBoard pour Mac avec les commandes du score et du chrono" %}
+  {% include screenshot.html name="1_Main" alt="Écran principal de ScoreBoard pour Mac avec les commandes du score et du chrono" %}
   <br>
-  {% include screenshot.html name="2_preferences" alt="Préférences de ScoreBoard pour Mac pour personnaliser la sortie du tableau de score" %}
+  {% include screenshot.html name="2_Settings" alt="Préférences de ScoreBoard pour Mac pour personnaliser la sortie du tableau de score" %}
   <br>
-  {% include screenshot.html name="3_hotkeys" alt="Raccourcis clavier et actions de la Touch Bar dans ScoreBoard pour Mac" %}
+  {% include screenshot.html name="3_Hotkeys" alt="Raccourcis clavier et actions de la Touch Bar dans ScoreBoard pour Mac" %}
   <br>
-  {% include screenshot.html name="4_txtFiles" alt="Fichiers TXT de sortie de ScoreBoard pour Mac utilisés comme sources texte dans OBS" %}
+  {% include screenshot.html name="4_Files" alt="Fichiers TXT de sortie de ScoreBoard pour Mac utilisés comme sources texte dans OBS" %}
+  <br>
+  {% include screenshot.html name="5_WebSockets" alt="Réglages de connexion WebSocket de ScoreBoard pour Mac pour les données en direct dans OBS, Streamlabs, Meld et DataLink" %}
   <br>
 </p>
 
