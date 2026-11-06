@@ -4,13 +4,13 @@ ref: guides
 layout: page
 title: Guía de usuario
 description: >
-  Tutoriales paso a paso para añadir un marcador de ScoreBoard en OBS, Streamlabs, Wirecast
+  o Meld: cronómetros de texto, actualizaciones instantáneas por WebSocket, fondo del marcador, cronómetro con décimas de segundo y alineaciones.
   o Meld: cronómetros de texto, fondo del marcador, cronómetro con décimas de segundo y alineaciones.
 image: /img/scoreboard_for_mac_light.png
 permalink: /es/guides/
 ---
 
-Tutoriales para añadir un marcador en OBS: las mismas fuentes de archivos TXT e imagen funcionan igual en Streamlabs, Wirecast y Meld.
+Tutoriales para añadir un marcador en OBS: las mismas fuentes de archivos TXT e imagen funcionan igual en Streamlabs, Wirecast y Meld. Los datos de texto también pueden enviarse al instante por WebSocket a OBS, Streamlabs, Meld y DataLink (TriCaster).
 
 _Los nombres de los menús de OBS corresponden a la interfaz en español; entre paréntesis, a la interfaz en inglés._
 
@@ -18,6 +18,7 @@ _Los nombres de los menús de OBS corresponden a la interfaz en español; entre 
 - [Primeros pasos](#getting-started)
 - [Archivos de texto e imagen de salida](#output-text-and-image-files)
 - [Cómo añadir un cronómetro/contador en OBS](#how-to-add-a-text-timer-or-counter-in-obs)
+- [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket)
 - [Cómo añadir un fondo de marcador](#how-to-add-a-scorebug-background-image-in-obs)
 - [Cómo mostrar correctamente las décimas](#how-to-display-tenths-of-a-second-in-obs)
 - [Cómo mostrar las alineaciones](#how-to-show-team-rosters-in-an-obs-broadcast)
@@ -27,16 +28,19 @@ _Los nombres de los menús de OBS corresponden a la interfaz en español; entre 
 ## Preguntas frecuentes {#faq}
 
 **¿Cómo añado un marcador deportivo en vivo a OBS en Mac?**  
-Instala ScoreBoard para Mac y, después, añade sus archivos TXT de salida como fuentes *Texto (FreeType 2)* y sus imágenes de promo/logotipo como fuentes *Imagen* en OBS. Consulta [Primeros pasos](#getting-started) más abajo.
+Instala ScoreBoard para Mac y, después, añade sus archivos TXT de salida como fuentes *Texto (FreeType 2)* y sus imágenes de promo/logotipo como fuentes *Imagen* en OBS. Consulta [Primeros pasos](#getting-started) más abajo. También puedes conectar ScoreBoard a OBS por WebSocket y elegir qué datos muestra cada fuente de texto. Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket).
 
 **¿Por qué mi fuente de texto de OBS no se actualiza al instante?**  
-Por defecto, OBS vuelve a leer los archivos de texto aproximadamente una vez por segundo. Para actualizaciones más rápidas (por ejemplo, las décimas de segundo de un cronómetro), usa el plugin Advanced Scene Switcher. Consulta [Cómo mostrar las décimas de segundo](#how-to-display-tenths-of-a-second-in-obs).
+Por defecto, OBS vuelve a leer los archivos de texto aproximadamente una vez por segundo. Para actualizaciones instantáneas, conecta ScoreBoard a OBS por WebSocket: cada cambio se envía directamente a la fuente de texto, sin retardo de lectura de archivos. Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket). Si sigues usando archivos de texto, para actualizaciones más rápidas (por ejemplo, las décimas de segundo de un cronómetro) usa el plugin Advanced Scene Switcher. Consulta [Cómo mostrar las décimas de segundo](#how-to-display-tenths-of-a-second-in-obs).
+
+**¿Qué diferencia hay entre los archivos TXT y WebSocket?**  
+Los archivos TXT funcionan con cualquier software de streaming que lea archivos de texto, pero este los vuelve a leer con retardo (OBS, aproximadamente una vez por segundo). Por WebSocket, ScoreBoard envía cada cambio al instante a OBS, Streamlabs, Meld o DataLink (TriCaster), así que los cronómetros y el marcador se actualizan sin retardo y sin plugins adicionales. Los archivos de texto se siguen escribiendo, por lo que puedes usar ambas formas a la vez.
 
 **¿Puedo mostrar las alineaciones de los equipos en mi transmisión?**  
 Sí: añade la alineación como texto en el campo Estado de un equipo y/o como imagen mediante los botones de promo, y muéstrala con fuentes de Texto e Imagen en OBS. Consulta [Cómo mostrar las alineaciones](#how-to-show-team-rosters-in-an-obs-broadcast).
 
 **¿Funciona en Streamlabs, Wirecast o Meld en lugar de OBS?**  
-Sí. ScoreBoard genera archivos TXT e imágenes simples que cualquier software de streaming con fuentes de archivos de texto o de imagen puede leer igual que OBS.
+Sí. ScoreBoard genera archivos TXT e imágenes simples que cualquier software de streaming con fuentes de archivos de texto o de imagen puede leer igual que OBS. Streamlabs y Meld, así como DataLink (TriCaster), también pueden recibir los datos de texto al instante por WebSocket.
 
 **¿Necesito una imagen de fondo para el marcador o basta con las fuentes de texto?**  
 Ambas opciones sirven. Las fuentes de texto por sí solas muestran los valores en vivo; una imagen de fondo detrás (consulta [Cómo añadir un fondo de marcador](#how-to-add-a-scorebug-background-image-in-obs)) le da un aspecto más cuidado.
@@ -59,6 +63,7 @@ Ambas opciones sirven. Las fuentes de texto por sí solas muestran los valores e
 
 - **Actualización del marcador en vivo:** cambia el marcador fácilmente en tiempo real durante un partido.  
 - **Integración mediante archivos de texto:** genera y actualiza automáticamente archivos `.txt` con los datos del marcador, compatibles con la fuente *Texto (FreeType 2)* de OBS Studio.  
+- **Integración por WebSocket:** envía los datos de texto al instante a OBS Studio, Streamlabs, Meld y DataLink (TriCaster), sin retardo de lectura de archivos.
 - **Consumo mínimo de recursos:** la app está optimizada para macOS y funciona con fluidez incluso en equipos modestos.  
 - **Interfaz intuitiva:** una interfaz sencilla y clara para gestionar equipos, marcador y otros detalles del partido.
 - **Diseño personalizable:** adapta el aspecto del marcador al estilo de tu transmisión, incluidos tamaño de fuente, color y posición. Esto se hace en el programa de streaming, por ejemplo en OBS.  
@@ -74,14 +79,16 @@ Ambas opciones sirven. Las fuentes de texto por sí solas muestran los valores e
 2. **Actualiza el marcador en tiempo real**  
    - Ajusta el marcador de los equipos con los controles sencillos de la app.  
    - La app guarda automáticamente los valores actualizados en archivos `.txt`. Carpeta por defecto: `Descargas/ScoreBoard Outputs`.
+   - Con una conexión WebSocket activa, los mismos datos se envían al instante a OBS, Streamlabs, Meld o DataLink (TriCaster).
 
 3. **Intégrala con OBS Studio**  
    - En OBS, crea una nueva fuente *Texto (FreeType 2)* o simplemente arrastra el archivo de texto deseado a la ventana de OBS.  
    - Activa la opción «Leer desde archivo» (*Read from File*) y selecciona el archivo `.txt` generado por la app.  
    - Personaliza la fuente de texto en OBS: posición, tamaño, tipo de letra, color, etc.  
+   - O conecta ScoreBoard a OBS por WebSocket y vincula las fuentes de texto con los datos. Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket).
 
 4. **Transmite o graba**  
-   - Al cambiar el marcador en ScoreBoard, los cambios se reflejan en OBS en tiempo real. OBS lee automáticamente los archivos del disco (aproximadamente una vez por segundo) y muestra el resultado.  
+   - Al cambiar el marcador en ScoreBoard, los cambios se reflejan en OBS en tiempo real. OBS lee automáticamente los archivos del disco (aproximadamente una vez por segundo) y muestra el resultado. Por WebSocket, los cambios aparecen al instante.  
 
 ---
 
@@ -89,7 +96,9 @@ Ambas opciones sirven. Las fuentes de texto por sí solas muestran los valores e
 
 Por defecto, ScoreBoard escribe estos archivos en `Descargas/ScoreBoard Outputs` (puedes elegir otra carpeta en Preferencias). Cada archivo `.txt` se actualiza en vivo mientras controlas el partido y se añade en OBS como fuente **Texto (FreeType 2)**; cada archivo `.png` se añade como fuente **Imagen**. Consulta [Primeros pasos](#getting-started) más arriba.
 
-### Archivos de texto {#text-files}
+### Archivos de texto y datos por WebSocket {#text-files}
+
+Cada valor de texto se escribe en su archivo `.txt` y, con una conexión WebSocket activa, se envía al instante a la fuente de texto vinculada en OBS, Streamlabs, Meld o DataLink (TriCaster). Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket).
 
 | Archivo | Contenido | Ejemplo |
 |---|---|---|
@@ -165,6 +174,39 @@ Si quieres organizar tu configuración, crea una nueva escena:
 
 ---
 
+## Cómo enviar texto a OBS por WebSocket {#how-to-send-text-to-obs-via-websocket}
+
+*Actualizaciones instantáneas sin leer archivos: ScoreBoard envía los datos directamente a las fuentes de texto de OBS mediante el servidor WebSocket integrado en OBS Studio 28 y posteriores.*
+
+![Envío de datos de ScoreBoard a fuentes de texto de OBS por WebSocket](/tutorial-img/how_send_text_to_obs_via_websocket.png)
+
+### 1. Activa el servidor WebSocket en OBS
+- En OBS, abre **Herramientas** (*Tools*) → **WebSocket Server Settings**.
+- Marca **Enable WebSocket server**.
+- Haz clic en **Show Connect Info** para ver la IP del servidor, el puerto (4455 por defecto) y la contraseña.
+
+### 2. Añade fuentes de texto en OBS
+- En la sección **Fuentes** (*Sources*), haz clic en **+** y selecciona **Texto (FreeType 2)** (*Text (FreeType 2)*).
+- Pon a cada fuente un nombre descriptivo (p. ej., `Main Timer`, `Home Goal`). No hace falta activar **Leer desde archivo** (*Read from File*).
+
+### 3. Conecta ScoreBoard a OBS
+- En ScoreBoard, haz clic en el botón **conexiones** de la barra de herramientas y selecciona **OBS** en la lista **Servicios**.
+- Introduce el servidor (`ws://127.0.0.1` si OBS se ejecuta en el mismo Mac), el puerto y la contraseña de OBS.
+- Haz clic en **Conectar**: el estado cambia a **Conectado**.
+
+### 4. Vincula las fuentes de texto con los datos de ScoreBoard
+- La lista **Fuentes de texto** muestra las fuentes de texto de tus escenas de OBS como *Escena — Fuente*.
+- Para cada fuente, elige en la columna **Datos** qué enviar (p. ej., `Timer`). Las fuentes con **No enviar** no cambian.
+- Las fuentes vinculadas se cambian al modo de texto manual en cada conexión. La misma fuente en varias escenas siempre muestra los mismos datos.
+
+### 5. Personaliza y comprueba
+- Coloca y da estilo al texto en OBS (fuente, tamaño, color) como siempre.
+- Inicia el cronómetro en ScoreBoard y comprueba que el valor cambia al instante en OBS.
+
+**Streamlabs, Meld y DataLink (TriCaster) se conectan del mismo modo: selecciona el servicio en la lista «Servicios» e introduce sus datos de conexión. El botón «Guía» de ScoreBoard indica dónde encontrarlos.**
+
+---
+
 ## Cómo añadir una imagen de fondo del marcador en OBS {#how-to-add-a-scorebug-background-image-in-obs}
 
 ![Añadir en OBS una fuente de imagen con el fondo del marcador](/tutorial-img/how_add_scoreboard_background_to_obs.gif)
@@ -195,6 +237,8 @@ Si quieres organizar tu configuración, crea una nueva escena:
 ## Cómo mostrar las décimas de segundo en OBS {#how-to-display-tenths-of-a-second-in-obs}
 
 *Por defecto, OBS lee los archivos de texto aproximadamente una vez por segundo. Para mostrar correctamente las décimas, hay que reducir ese retardo.*
+
+*Si ScoreBoard envía los datos a OBS por WebSocket, el plugin no es necesario. Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket). Los pasos siguientes son para fuentes de archivos de texto.*
 
 ![Cronómetro con décimas de segundo en OBS usando Advanced Scene Switcher](/tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
@@ -295,7 +339,7 @@ Volver a la [presentación de ScoreBoard para Mac](/es/) o [descargar la versió
       "name": "¿Cómo añado un marcador deportivo en vivo a OBS en Mac?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Instala ScoreBoard para Mac y, después, añade sus archivos TXT de salida como fuentes Texto (FreeType 2) y sus imágenes de promo/logotipo como fuentes Imagen en OBS."
+        "text": "Instala ScoreBoard para Mac y, después, añade sus archivos TXT de salida como fuentes Texto (FreeType 2) y sus imágenes de promo/logotipo como fuentes Imagen en OBS. También puedes conectar ScoreBoard a OBS por WebSocket y elegir qué datos muestra cada fuente de texto."
       }
     },
     {
@@ -303,7 +347,15 @@ Volver a la [presentación de ScoreBoard para Mac](/es/) o [descargar la versió
       "name": "¿Por qué mi fuente de texto de OBS no se actualiza al instante?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Por defecto, OBS vuelve a leer los archivos de texto aproximadamente una vez por segundo. Para actualizaciones más rápidas, como las décimas de segundo de un cronómetro, usa el plugin Advanced Scene Switcher: reduce el intervalo de comprobación y pasa el contenido del archivo a la fuente de texto."
+        "text": "Por defecto, OBS vuelve a leer los archivos de texto aproximadamente una vez por segundo. Para actualizaciones instantáneas, conecta ScoreBoard a OBS por WebSocket: cada cambio se envía directamente a la fuente de texto, sin retardo de lectura de archivos. Si sigues usando archivos de texto, el plugin Advanced Scene Switcher reduce el intervalo de comprobación, por ejemplo para las décimas de segundo de un cronómetro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre los archivos TXT y WebSocket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los archivos TXT funcionan con cualquier software de streaming que lea archivos de texto, pero este los vuelve a leer con retardo (OBS, aproximadamente una vez por segundo). Por WebSocket, ScoreBoard envía cada cambio al instante a OBS, Streamlabs, Meld o DataLink (TriCaster), así que los cronómetros y el marcador se actualizan sin retardo y sin plugins adicionales. Los archivos de texto se siguen escribiendo, por lo que puedes usar ambas formas a la vez."
       }
     },
     {
@@ -319,7 +371,7 @@ Volver a la [presentación de ScoreBoard para Mac](/es/) o [descargar la versió
       "name": "¿Funciona en Streamlabs, Wirecast o Meld en lugar de OBS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. ScoreBoard genera archivos TXT e imágenes simples que cualquier software de streaming con fuentes de archivos de texto o de imagen puede leer igual que OBS."
+        "text": "Sí. ScoreBoard genera archivos TXT e imágenes simples que cualquier software de streaming con fuentes de archivos de texto o de imagen puede leer igual que OBS. Streamlabs y Meld, así como DataLink (TriCaster), también pueden recibir los datos de texto al instante por WebSocket."
       }
     },
     {
@@ -350,6 +402,22 @@ Volver a la [presentación de ScoreBoard para Mac](/es/) o [descargar la versió
     { "@type": "HowToStep", "position": 7, "name": "Coloca el texto en el lienzo", "text": "Arrastra el cuadro de texto en la vista previa para situarlo en la escena y cambia su tamaño si es necesario." },
     { "@type": "HowToStep", "position": 8, "name": "Personaliza el aspecto", "text": "Usa las opciones Fuente, Tamaño y Color para ajustar el estilo del texto." },
     { "@type": "HowToStep", "position": 9, "name": "Comprueba la actualización del archivo", "text": "Cambia el valor del contador en ScoreBoard y comprueba que los cambios aparecen en OBS en tiempo real." }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "inLanguage": "es",
+  "name": "Cómo enviar texto a OBS por WebSocket",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Activa el servidor WebSocket en OBS", "text": "En OBS, abre Herramientas → WebSocket Server Settings, marca Enable WebSocket server y haz clic en Show Connect Info para ver la IP del servidor, el puerto y la contraseña." },
+    { "@type": "HowToStep", "position": 2, "name": "Añade fuentes de texto en OBS", "text": "En la sección Fuentes, haz clic en +, selecciona Texto (FreeType 2) y pon a cada fuente un nombre descriptivo." },
+    { "@type": "HowToStep", "position": 3, "name": "Conecta ScoreBoard a OBS", "text": "En ScoreBoard, haz clic en conexiones, selecciona OBS, introduce el servidor, el puerto y la contraseña de OBS y haz clic en Conectar." },
+    { "@type": "HowToStep", "position": 4, "name": "Vincula las fuentes de texto con los datos de ScoreBoard", "text": "En la lista Fuentes de texto, elige en la columna Datos qué enviar a cada fuente de texto de OBS." },
+    { "@type": "HowToStep", "position": 5, "name": "Personaliza y comprueba", "text": "Da estilo al texto en OBS, inicia el cronómetro en ScoreBoard y comprueba que el valor cambia al instante en OBS." }
   ]
 }
 </script>

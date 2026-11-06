@@ -4,13 +4,13 @@ ref: guides
 layout: page
 title: 用户指南
 description: >
-  分步教程：在 OBS、Streamlabs、Wirecast 或 Meld 中添加 ScoreBoard 记分牌叠加层——
+  文本计时器、WebSocket 即时更新、记分牌背景、十分之一秒计时器和球队阵容。
   文本计时器、记分牌背景、十分之一秒计时器和球队阵容。
 image: /img/scoreboard_for_mac_light.png
 permalink: /zh-hans/guides/
 ---
 
-在 OBS 中添加记分牌的教程——同样的 TXT/图像文件来源在 Streamlabs、Wirecast 和 Meld 中的用法完全相同。
+在 OBS 中添加记分牌的教程——同样的 TXT/图像文件来源在 Streamlabs、Wirecast 和 Meld 中的用法完全相同。文本数据还可以通过 WebSocket 即时发送到 OBS、Streamlabs、Meld 和 DataLink（TriCaster）。
 
 _OBS 中的菜单名称按简体中文界面给出，括号内为英文界面名称。_
 
@@ -18,6 +18,7 @@ _OBS 中的菜单名称按简体中文界面给出，括号内为英文界面名
 - [快速入门](#getting-started)
 - [输出的文本和图像文件](#output-text-and-image-files)
 - [如何在 OBS 中添加计时器/计数器](#how-to-add-a-text-timer-or-counter-in-obs)
+- [如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)
 - [如何添加记分牌背景](#how-to-add-a-scorebug-background-image-in-obs)
 - [如何正确显示十分之一秒](#how-to-display-tenths-of-a-second-in-obs)
 - [如何显示球队阵容](#how-to-show-team-rosters-in-an-obs-broadcast)
@@ -27,16 +28,19 @@ _OBS 中的菜单名称按简体中文界面给出，括号内为英文界面名
 ## 常见问题 {#faq}
 
 **如何在 Mac 上为 OBS 添加实时体育记分牌？**  
-安装 ScoreBoard for Mac，然后在 OBS 中把它输出的 TXT 文件添加为 *文本 (FreeType 2)* 来源，把宣传图/队徽图片添加为 *图像* 来源——参见下方的[快速入门](#getting-started)。
+安装 ScoreBoard for Mac，然后在 OBS 中把它输出的 TXT 文件添加为 *文本 (FreeType 2)* 来源，把宣传图/队徽图片添加为 *图像* 来源——参见下方的[快速入门](#getting-started)。也可以通过 WebSocket 把 ScoreBoard 连接到 OBS，并为每个文本来源选择要显示的数据——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。
 
 **为什么 OBS 的文本来源不能即时更新？**  
-OBS 默认大约每秒重新读取一次文本文件。若需要更快的更新（例如计时器的十分之一秒），请使用 Advanced Scene Switcher 插件——参见[如何显示十分之一秒](#how-to-display-tenths-of-a-second-in-obs)。
+OBS 默认大约每秒重新读取一次文本文件。若需要即时更新，请通过 WebSocket 把 ScoreBoard 连接到 OBS：每次改动都会直接发送到文本来源，没有读取文件的延迟——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。如果继续使用文本文件，需要更快的更新（例如计时器的十分之一秒）时，请使用 Advanced Scene Switcher 插件——参见[如何显示十分之一秒](#how-to-display-tenths-of-a-second-in-obs)。
+
+**TXT 文件和 WebSocket 有什么区别？**  
+任何能读取文本文件的直播软件都支持 TXT 文件，但软件会延迟重新读取（OBS 大约每秒一次）。通过 WebSocket，ScoreBoard 会把每次改动即时发送到 OBS、Streamlabs、Meld 或 DataLink（TriCaster），计时器和比分无需额外插件即可无延迟更新。文本文件仍会照常写入，因此两种方式可以同时使用。
 
 **可以在直播中显示球队阵容吗？**  
 可以——把阵容以文本形式填入球队的状态字段，和/或通过宣传按钮以图片形式添加，然后在 OBS 中用文本和图像来源显示——参见[如何显示球队阵容](#how-to-show-team-rosters-in-an-obs-broadcast)。
 
 **能否用 Streamlabs、Wirecast 或 Meld 代替 OBS？**  
-可以。ScoreBoard 输出的是普通 TXT 文件和图像文件，任何支持文本文件或图像文件来源的直播软件都能像 OBS 一样读取。
+可以。ScoreBoard 输出的是普通 TXT 文件和图像文件，任何支持文本文件或图像文件来源的直播软件都能像 OBS 一样读取。Streamlabs、Meld 以及 DataLink（TriCaster）还可以通过 WebSocket 即时接收文本数据。
 
 **一定要有记分牌背景图吗？只用文本来源可以吗？**  
 两种方式都可以。仅用文本来源即可显示实时数值；在其下方添加背景图（参见[如何添加记分牌背景](#how-to-add-a-scorebug-background-image-in-obs)）能让画面更美观。
@@ -59,6 +63,7 @@ OBS 默认大约每秒重新读取一次文本文件。若需要更快的更新�
 
 - **实时更新比分：**比赛过程中可随时轻松更新比分。  
 - **文本文件集成：**自动生成并更新包含记分牌信息的 `.txt` 文件，兼容 OBS Studio 的 *文本 (FreeType 2)* 来源。  
+- **WebSocket 集成：**把文本数据即时发送到 OBS Studio、Streamlabs、Meld 和 DataLink（TriCaster），没有读取文件的延迟。
 - **资源占用极低：**应用针对 macOS 优化，即使在配置较低的电脑上也能流畅运行。  
 - **直观的界面：**简洁清晰的界面，便于管理球队、比分及其他比赛信息。
 - **可自定义布局：**可按直播风格调整记分牌外观，包括字号、颜色和位置。这些设置在直播软件中完成，例如 OBS。  
@@ -74,14 +79,16 @@ OBS 默认大约每秒重新读取一次文本文件。若需要更快的更新�
 2. **实时更新比分**  
    - 使用应用中简单易用的控件调整双方比分。  
    - 应用会自动把更新后的数据保存到 `.txt` 文件。默认目录为 `下载/ScoreBoard Outputs`。
+   - WebSocket 连接处于活动状态时，同样的数据会即时发送到 OBS、Streamlabs、Meld 或 DataLink（TriCaster）。
 
 3. **接入 OBS Studio**  
    - 在 OBS 中新建 *文本 (FreeType 2)* 来源，或直接把所需的文本文件拖入 OBS 窗口。  
    - 勾选“从文件读取”（*Read from File*），并选择应用生成的 `.txt` 文件。  
    - 在 OBS 中调整文本来源：位置、大小、字体、颜色等。  
+   - 或者通过 WebSocket 把 ScoreBoard 连接到 OBS，并把文本来源绑定到数据——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。
 
 4. **直播或录制**  
-   - 你在 ScoreBoard 中更新比分时，变化会实时反映到 OBS 中。OBS 会自动从磁盘读取文件（大约每秒一次）并显示结果。  
+   - 你在 ScoreBoard 中更新比分时，变化会实时反映到 OBS 中。OBS 会自动从磁盘读取文件（大约每秒一次）并显示结果。通过 WebSocket，改动会即时显示。  
 
 ---
 
@@ -89,7 +96,9 @@ OBS 默认大约每秒重新读取一次文本文件。若需要更快的更新�
 
 ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏好设置中选择其他输出目录）。每个 `.txt` 文件会在你操控比赛时实时更新，应在 OBS 中添加为 **文本 (FreeType 2)** 来源；每个 `.png` 文件应添加为 **图像** 来源——参见上方的[快速入门](#getting-started)。
 
-### 文本文件 {#text-files}
+### 文本文件和 WebSocket 数据 {#text-files}
+
+每个文本值都会写入对应的 `.txt` 文件；WebSocket 连接处于活动状态时，还会即时发送到 OBS、Streamlabs、Meld 或 DataLink（TriCaster）中绑定的文本来源——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。
 
 | 文件 | 内容 | 示例 |
 |---|---|---|
@@ -165,6 +174,39 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
 
 ---
 
+## 如何通过 WebSocket 向 OBS 发送文本 {#how-to-send-text-to-obs-via-websocket}
+
+*无需读取文件的即时更新：ScoreBoard 通过 OBS Studio 28 及更高版本内置的 WebSocket 服务器，把数据直接发送到 OBS 的文本来源。*
+
+![通过 WebSocket 把 ScoreBoard 数据发送到 OBS 文本来源](/tutorial-img/how_send_text_to_obs_via_websocket.png)
+
+### 1. 在 OBS 中启用 WebSocket 服务器
+- 在 OBS 中打开 **工具**（*Tools*）→ **WebSocket Server Settings**。
+- 勾选 **Enable WebSocket server**。
+- 点击 **Show Connect Info**，查看服务器 IP、端口（默认 4455）和密码。
+
+### 2. 在 OBS 中添加文本来源
+- 在 **来源**（*Sources*）区域点击 **+**，选择 **文本 (FreeType 2)**（*Text (FreeType 2)*）。
+- 为每个来源起一个易于识别的名称（例如 `Main Timer`、`Home Goal`）。无需勾选 **从文件读取**（*Read from File*）。
+
+### 3. 把 ScoreBoard 连接到 OBS
+- 在 ScoreBoard 中点击工具栏上的 **连接** 按钮，在 **服务** 列表中选择 **OBS**。
+- 输入 OBS 中的服务器地址（如果 OBS 运行在同一台 Mac 上，则为 `ws://127.0.0.1`）、端口和密码。
+- 点击 **连接**，状态会变为 **已连接**。
+
+### 4. 把文本来源绑定到 ScoreBoard 数据
+- **文本来源** 列表以 *场景 — 来源* 的形式显示 OBS 场景中的文本来源。
+- 在 **数据** 列中为每个来源选择要发送的内容（例如 `Timer`）。设为 **不发送** 的来源保持不变。
+- 每次连接时，已绑定的来源都会切换为手动文本模式。同一来源在多个场景中始终显示相同的数据。
+
+### 5. 调整外观并测试
+- 像平常一样在 OBS 中调整文本的位置和样式（字体、大小、颜色）。
+- 在 ScoreBoard 中启动计时器，确认 OBS 中的数值即时变化。
+
+**Streamlabs、Meld 和 DataLink（TriCaster）的连接方式相同：在“服务”列表中选择对应服务并输入连接信息。ScoreBoard 中的“设置指南”按钮会告诉你在哪里找到这些信息。**
+
+---
+
 ## 如何在 OBS 中添加记分牌背景图 {#how-to-add-a-scorebug-background-image-in-obs}
 
 ![在 OBS 中添加记分牌背景图像来源](/tutorial-img/how_add_scoreboard_background_to_obs.gif)
@@ -195,6 +237,8 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
 ## 如何在 OBS 中显示十分之一秒 {#how-to-display-tenths-of-a-second-in-obs}
 
 *OBS 默认大约每秒读取一次文本文件。要正确显示十分之一秒，需要缩短这一延迟。*
+
+*如果 ScoreBoard 通过 WebSocket 向 OBS 发送数据，则无需此插件——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。以下步骤适用于文本文件来源。*
 
 ![使用 Advanced Scene Switcher 在 OBS 中显示十分之一秒计时器](/tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
@@ -295,7 +339,7 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
       "name": "如何在 Mac 上为 OBS 添加实时体育记分牌？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "安装 ScoreBoard for Mac，然后在 OBS 中把它输出的 TXT 文件添加为文本 (FreeType 2) 来源，把宣传图/队徽图片添加为图像来源。"
+        "text": "安装 ScoreBoard for Mac，然后在 OBS 中把它输出的 TXT 文件添加为文本 (FreeType 2) 来源，把宣传图/队徽图片添加为图像来源。也可以通过 WebSocket 把 ScoreBoard 连接到 OBS，并为每个文本来源选择要显示的数据。"
       }
     },
     {
@@ -303,7 +347,15 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
       "name": "为什么 OBS 的文本来源不能即时更新？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "OBS 默认大约每秒重新读取一次文本文件。若需要更快的更新，例如计时器的十分之一秒，请使用 Advanced Scene Switcher 插件：它能缩短检查间隔，并把文件内容推送到文本来源。"
+        "text": "OBS 默认大约每秒重新读取一次文本文件。若需要即时更新，请通过 WebSocket 把 ScoreBoard 连接到 OBS：每次改动都会直接发送到文本来源，没有读取文件的延迟。如果继续使用文本文件，可以用 Advanced Scene Switcher 插件缩短检查间隔，例如用于显示计时器的十分之一秒。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "TXT 文件和 WebSocket 有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "任何能读取文本文件的直播软件都支持 TXT 文件，但软件会延迟重新读取（OBS 大约每秒一次）。通过 WebSocket，ScoreBoard 会把每次改动即时发送到 OBS、Streamlabs、Meld 或 DataLink（TriCaster），计时器和比分无需额外插件即可无延迟更新。文本文件仍会照常写入，因此两种方式可以同时使用。"
       }
     },
     {
@@ -319,7 +371,7 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
       "name": "能否用 Streamlabs、Wirecast 或 Meld 代替 OBS？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "可以。ScoreBoard 输出的是普通 TXT 文件和图像文件，任何支持文本文件或图像文件来源的直播软件都能像 OBS 一样读取。"
+        "text": "可以。ScoreBoard 输出的是普通 TXT 文件和图像文件，任何支持文本文件或图像文件来源的直播软件都能像 OBS 一样读取。Streamlabs、Meld 以及 DataLink（TriCaster）还可以通过 WebSocket 即时接收文本数据。"
       }
     },
     {
@@ -350,6 +402,22 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
     { "@type": "HowToStep", "position": 7, "name": "在画布上放置文本", "text": "在预览区域拖动文本框，把它放到场景中的合适位置，并根据需要调整大小。" },
     { "@type": "HowToStep", "position": 8, "name": "调整外观", "text": "使用字体、大小和颜色选项调整文本样式。" },
     { "@type": "HowToStep", "position": 9, "name": "测试文件更新", "text": "在 ScoreBoard 中修改计数器的值，确认变化实时显示在 OBS 中。" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "inLanguage": "zh-Hans",
+  "name": "如何通过 WebSocket 向 OBS 发送文本",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "在 OBS 中启用 WebSocket 服务器", "text": "在 OBS 中打开 工具 → WebSocket Server Settings，勾选 Enable WebSocket server，并点击 Show Connect Info 查看服务器 IP、端口和密码。" },
+    { "@type": "HowToStep", "position": 2, "name": "在 OBS 中添加文本来源", "text": "在来源区域点击 +，选择文本 (FreeType 2)，并为每个来源起一个易于识别的名称。" },
+    { "@type": "HowToStep", "position": 3, "name": "把 ScoreBoard 连接到 OBS", "text": "在 ScoreBoard 中点击连接按钮，选择 OBS，输入 OBS 中的服务器、端口和密码，然后点击连接。" },
+    { "@type": "HowToStep", "position": 4, "name": "把文本来源绑定到 ScoreBoard 数据", "text": "在文本来源列表的数据列中，为每个 OBS 文本来源选择要发送的内容。" },
+    { "@type": "HowToStep", "position": 5, "name": "调整外观并测试", "text": "在 OBS 中调整文本样式，在 ScoreBoard 中启动计时器，确认 OBS 中的数值即时变化。" }
   ]
 }
 </script>

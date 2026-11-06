@@ -4,7 +4,8 @@ ref: home
 title: Marcador para OBS, Streamlabs, Wirecast y Meld
 description: >
   App de marcador para macOS que puedes probar gratis, para OBS, Streamlabs, Wirecast y Meld. Muestra
-  en vivo marcador, cronómetro, sanciones y estadísticas de equipos en tu transmisión deportiva mediante archivos TXT.
+  en vivo marcador, cronómetro, sanciones y estadísticas de equipos en tu transmisión deportiva mediante archivos TXT
+  o con actualizaciones instantáneas por WebSocket en OBS, Streamlabs, Meld y DataLink (TriCaster).
 image: /img/scoreboard_for_mac_light.png
 layout: home
 permalink: /es/
@@ -13,6 +14,8 @@ permalink: /es/
 Una utilidad completa para mostrar estadísticas en una transmisión deportiva a través de OBS, Streamlabs, Wirecast, Meld y cualquier otro software de streaming que admita fuentes de archivos de texto o de imagen. Te ayudará a mostrar las estadísticas necesarias de cada partido sobre el vídeo de tus retransmisiones deportivas en línea.
 
 Los datos de texto se escriben en archivos TXT en el disco de tu ordenador (por defecto, en la carpeta «Descargas»). Cada archivo puede añadirse en un programa de streaming (fuente: texto) y superponerse a cualquier imagen de tu marcador.
+
+Los datos de texto también pueden enviarse al instante por WebSocket a OBS Studio, Streamlabs, Meld y DataLink (TriCaster), sin el retardo de leer archivos del disco.
 
 <p align="center">
 	<img class="header-image" alt="Pantalla principal de ScoreBoard para Mac" src="/img/scoreboard_for_mac_light.png">
@@ -31,6 +34,7 @@ Los datos de texto se escriben en archivos TXT en el disco de tu ordenador (por 
 - Logotipos y promos de los dos equipos y del partido
 
 ### Funciones adicionales:
+- Actualización instantánea de datos por WebSocket en OBS, Streamlabs, Meld y DataLink (TriCaster)
 - Atajos de teclado para un control sencillo
 - Intercambio de estadísticas entre equipos
 - Reinicio de estadísticas
@@ -98,13 +102,16 @@ _OBS y ScoreBoard se han actualizado varias veces desde entonces, pero los ajust
 ## Preguntas frecuentes
 
 **¿ScoreBoard funciona con Streamlabs, Wirecast y Meld?**  
-Sí. ScoreBoard escribe el marcador, el cronómetro y las estadísticas en archivos TXT (y los logotipos y promos en archivos de imagen) en el disco. Cualquier software de streaming que admita fuentes de archivos de texto o de imagen —incluidos OBS, Streamlabs, Wirecast y Meld— puede leerlos y mostrarlos superpuestos.
+Sí. ScoreBoard escribe el marcador, el cronómetro y las estadísticas en archivos TXT (y los logotipos y promos en archivos de imagen) en el disco. Cualquier software de streaming que admita fuentes de archivos de texto o de imagen —incluidos OBS, Streamlabs, Wirecast y Meld— puede leerlos y mostrarlos superpuestos. OBS, Streamlabs y Meld también pueden recibir los datos de texto al instante por WebSocket.
+
+**¿Puede ScoreBoard enviar datos a OBS al instante, sin leer archivos de texto?**  
+Sí. ScoreBoard se conecta por WebSocket a OBS Studio, Streamlabs, Meld y DataLink (TriCaster) y envía cada cambio del marcador, el cronómetro y otros datos de texto directamente a las fuentes de texto elegidas, sin el retardo de leer archivos del disco. Consulta la [guía de configuración de WebSocket](/es/guides/#how-to-send-text-to-obs-via-websocket).
 
 **¿Hay una versión gratuita?**  
 Sí, puedes descargar una [versión de prueba gratuita](/free-apps/ScoreBoard-free.zip), notarizada y verificada por Apple. Es totalmente funcional, con la salida limitada en algunos campos. La versión completa está disponible en el [Mac App Store](https://apps.apple.com/app/id1579159150).
 
 **¿En qué formato genera ScoreBoard los datos?**  
-Archivos TXT simples para los valores de texto (marcador, cronómetro, nombres de equipos, etc.) y archivos de imagen para los logotipos de equipos y partido y los gráficos promocionales. Se actualizan automáticamente mientras controlas el partido desde la app.
+Archivos TXT simples para los valores de texto (marcador, cronómetro, nombres de equipos, etc.) y archivos de imagen para los logotipos de equipos y partido y los gráficos promocionales. Se actualizan automáticamente mientras controlas el partido desde la app. Los valores de texto también pueden enviarse al instante por WebSocket a OBS, Streamlabs, Meld y DataLink (TriCaster).
 
 **¿ScoreBoard necesita conexión a Internet o una cuenta?**  
 No. ScoreBoard funciona totalmente en local en tu Mac y no recopila ningún dato — consulta la [Política de privacidad](/es/privacy/).
@@ -120,7 +127,7 @@ No. ScoreBoard funciona totalmente en local en tu Mac y no recopila ningún dato
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Sports Scoreboard for OBS",
-  "description": "Transmisión deportiva con estadísticas en el marcador para OBS, Streamlabs, Wirecast, Meld y otros.",
+  "description": "Transmisión deportiva con estadísticas en el marcador para OBS, Streamlabs, Wirecast, Meld y otros, mediante archivos TXT o actualizaciones instantáneas por WebSocket (OBS, Streamlabs, Meld, DataLink para TriCaster).",
   "inLanguage": "es",
   "url": "https://scoreboardmac.github.io/es/",
   "applicationCategory": "MultimediaApplication",
@@ -172,7 +179,15 @@ No. ScoreBoard funciona totalmente en local en tu Mac y no recopila ningún dato
       "name": "¿ScoreBoard funciona con Streamlabs, Wirecast y Meld?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. ScoreBoard escribe el marcador, el cronómetro y las estadísticas en archivos TXT (y los logotipos y promos en archivos de imagen) en el disco. Cualquier software de streaming que admita fuentes de archivos de texto o de imagen —incluidos OBS, Streamlabs, Wirecast y Meld— puede leerlos y mostrarlos superpuestos."
+        "text": "Sí. ScoreBoard escribe el marcador, el cronómetro y las estadísticas en archivos TXT (y los logotipos y promos en archivos de imagen) en el disco. Cualquier software de streaming que admita fuentes de archivos de texto o de imagen —incluidos OBS, Streamlabs, Wirecast y Meld— puede leerlos y mostrarlos superpuestos. OBS, Streamlabs y Meld también pueden recibir los datos de texto al instante por WebSocket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede ScoreBoard enviar datos a OBS al instante, sin leer archivos de texto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. ScoreBoard se conecta por WebSocket a OBS Studio, Streamlabs, Meld y DataLink (TriCaster) y envía cada cambio del marcador, el cronómetro y otros datos de texto directamente a las fuentes de texto elegidas, sin el retardo de leer archivos del disco."
       }
     },
     {
@@ -188,7 +203,7 @@ No. ScoreBoard funciona totalmente en local en tu Mac y no recopila ningún dato
       "name": "¿En qué formato genera ScoreBoard los datos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Archivos TXT simples para los valores de texto (marcador, cronómetro, nombres de equipos, etc.) y archivos de imagen para los logotipos de equipos y partido y los gráficos promocionales. Se actualizan automáticamente mientras controlas el partido desde la app."
+        "text": "Archivos TXT simples para los valores de texto (marcador, cronómetro, nombres de equipos, etc.) y archivos de imagen para los logotipos de equipos y partido y los gráficos promocionales. Se actualizan automáticamente mientras controlas el partido desde la app. Los valores de texto también pueden enviarse al instante por WebSocket a OBS, Streamlabs, Meld y DataLink (TriCaster)."
       }
     },
     {

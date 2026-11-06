@@ -4,7 +4,8 @@ ref: home
 title: 适用于 OBS、Streamlabs、Wirecast 和 Meld 的记分牌
 description: >
   可免费试用的 macOS 记分牌应用，支持 OBS、Streamlabs、Wirecast 和 Meld。通过简单的 TXT 文件叠加，
-  在体育直播中实时显示比分、计时器、罚时和球队统计数据。
+  在体育直播中实时显示比分、计时器、罚时和球队统计数据，
+  或通过 WebSocket 即时更新到 OBS、Streamlabs、Meld 和 DataLink（TriCaster）。
 image: /img/scoreboard_for_mac_light.png
 layout: home
 permalink: /zh-hans/
@@ -13,6 +14,8 @@ permalink: /zh-hans/
 一款功能完整的工具，可在 OBS、Streamlabs、Wirecast、Meld 以及其他支持文本文件或图像文件来源的直播软件中显示体育直播的统计数据。它能帮助你在在线体育直播画面上叠加显示某场比赛所需的统计信息。
 
 文本数据会写入电脑磁盘上的 TXT 文件（默认保存在“下载”文件夹）。每个文件都可以在直播软件中添加为来源（来源：文本），并叠加在你的记分牌图片上。
+
+文本数据还可以通过 WebSocket 即时发送到 OBS Studio、Streamlabs、Meld 和 DataLink（TriCaster），没有从磁盘读取文件的延迟。
 
 <p align="center">
 	<img class="header-image" alt="ScoreBoard for Mac 主界面" src="/img/scoreboard_for_mac_light.png">
@@ -31,6 +34,7 @@ permalink: /zh-hans/
 - 两支球队及比赛的队徽和宣传图
 
 ### 其他功能：
+- 通过 WebSocket 在 OBS、Streamlabs、Meld 和 DataLink（TriCaster）中即时更新数据
 - 便捷操控的快捷键
 - 交换两队统计数据
 - 重置统计数据
@@ -98,13 +102,16 @@ _此后 OBS 和 ScoreBoard 已多次更新，但视频中的设置基本相同�
 ## 常见问题
 
 **ScoreBoard 支持 Streamlabs、Wirecast 和 Meld 吗？**  
-支持。ScoreBoard 会把比分、计时器和统计数据写入磁盘上的 TXT 文件（宣传图和队徽写入图像文件）。任何支持文本文件或图像文件来源的直播软件——包括 OBS、Streamlabs、Wirecast 和 Meld——都可以读取并以叠加层形式显示。
+支持。ScoreBoard 会把比分、计时器和统计数据写入磁盘上的 TXT 文件（宣传图和队徽写入图像文件）。任何支持文本文件或图像文件来源的直播软件——包括 OBS、Streamlabs、Wirecast 和 Meld——都可以读取并以叠加层形式显示。OBS、Streamlabs 和 Meld 还可以通过 WebSocket 即时接收文本数据。
+
+**ScoreBoard 能否不经文本文件、即时把数据发送到 OBS？**  
+可以。ScoreBoard 通过 WebSocket 连接 OBS Studio、Streamlabs、Meld 和 DataLink（TriCaster），把比分、计时器和其他文本数据的每次改动直接发送到所选的文本来源，没有从磁盘读取文件的延迟。参见 [WebSocket 设置指南](/zh-hans/guides/#how-to-send-text-to-obs-via-websocket)。
 
 **有免费版吗？**  
 有。可以下载[免费试用版](/free-apps/ScoreBoard-free.zip)，已通过 Apple 公证和验证。它功能完整，只是部分字段的输出受限。完整版可在 [Mac App Store](https://apps.apple.com/app/id1579159150) 获取。
 
 **ScoreBoard 以什么格式输出数据？**  
-文本值（比分、计时器、球队名称等）输出为纯 TXT 文件，球队/比赛队徽和宣传图输出为图像文件。你在应用中操控比赛时，这些文件会自动更新。
+文本值（比分、计时器、球队名称等）输出为纯 TXT 文件，球队/比赛队徽和宣传图输出为图像文件。你在应用中操控比赛时，这些文件会自动更新。文本值还可以通过 WebSocket 即时发送到 OBS、Streamlabs、Meld 和 DataLink（TriCaster）。
 
 **ScoreBoard 需要联网或注册账号吗？**  
 不需要。ScoreBoard 完全在你的 Mac 本地运行，不收集任何数据——详见[隐私政策](/zh-hans/privacy/)。
@@ -120,7 +127,7 @@ _此后 OBS 和 ScoreBoard 已多次更新，但视频中的设置基本相同�
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Sports Scoreboard for OBS",
-  "description": "为 OBS、Streamlabs、Wirecast、Meld 等软件提供带记分牌统计数据的体育直播。",
+  "description": "为 OBS、Streamlabs、Wirecast、Meld 等软件提供带记分牌统计数据的体育直播，可使用 TXT 文件，或通过 WebSocket 即时更新（OBS、Streamlabs、Meld、TriCaster 的 DataLink）。",
   "inLanguage": "zh-Hans",
   "url": "https://scoreboardmac.github.io/zh-hans/",
   "applicationCategory": "MultimediaApplication",
@@ -172,7 +179,15 @@ _此后 OBS 和 ScoreBoard 已多次更新，但视频中的设置基本相同�
       "name": "ScoreBoard 支持 Streamlabs、Wirecast 和 Meld 吗？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "支持。ScoreBoard 会把比分、计时器和统计数据写入磁盘上的 TXT 文件（宣传图和队徽写入图像文件）。任何支持文本文件或图像文件来源的直播软件——包括 OBS、Streamlabs、Wirecast 和 Meld——都可以读取并以叠加层形式显示。"
+        "text": "支持。ScoreBoard 会把比分、计时器和统计数据写入磁盘上的 TXT 文件（宣传图和队徽写入图像文件）。任何支持文本文件或图像文件来源的直播软件——包括 OBS、Streamlabs、Wirecast 和 Meld——都可以读取并以叠加层形式显示。OBS、Streamlabs 和 Meld 还可以通过 WebSocket 即时接收文本数据。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ScoreBoard 能否不经文本文件、即时把数据发送到 OBS？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。ScoreBoard 通过 WebSocket 连接 OBS Studio、Streamlabs、Meld 和 DataLink（TriCaster），把比分、计时器和其他文本数据的每次改动直接发送到所选的文本来源，没有从磁盘读取文件的延迟。"
       }
     },
     {
@@ -188,7 +203,7 @@ _此后 OBS 和 ScoreBoard 已多次更新，但视频中的设置基本相同�
       "name": "ScoreBoard 以什么格式输出数据？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "文本值（比分、计时器、球队名称等）输出为纯 TXT 文件，球队/比赛队徽和宣传图输出为图像文件。你在应用中操控比赛时，这些文件会自动更新。"
+        "text": "文本值（比分、计时器、球队名称等）输出为纯 TXT 文件，球队/比赛队徽和宣传图输出为图像文件。你在应用中操控比赛时，这些文件会自动更新。文本值还可以通过 WebSocket 即时发送到 OBS、Streamlabs、Meld 和 DataLink（TriCaster）。"
       }
     },
     {
