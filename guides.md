@@ -234,9 +234,12 @@ If you want to organize your setup, create a new scene:
 
 ## How to display tenths of a second in OBS
 
-*OBS by default reads text files approximately once per second. To display tenths correctly, you need to reduce this delay*
+*The easiest way is to connect ScoreBoard to OBS over WebSocket: data is sent instantly, so tenths of a second are displayed correctly without any plugins — see [How to send text to OBS via WebSocket](#how-to-send-text-to-obs-via-websocket).*
 
-*If ScoreBoard sends data to OBS over WebSocket, the plugin is not needed — see [How to send text to OBS via WebSocket](#how-to-send-text-to-obs-via-websocket). The steps below are for text-file sources.*
+<details class="legacy-method" markdown="1">
+<summary>Legacy method: text files + Advanced Scene Switcher plugin</summary>
+
+*OBS by default reads text files approximately once per second. To display tenths correctly with text-file sources, you need to reduce this delay with a plugin.*
 
 ![Displaying tenths of a second timer in OBS using Advanced Scene Switcher](tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
@@ -283,6 +286,8 @@ If you want to organize your setup, create a new scene:
 - In ScoreBoard settings, choose a style for the main timer (e.g., [:5.3] or [5.3])
 - For testing, set the timer in ScoreBoard to 1 minute (1:00)
 - Start the timer and check the result in OBS
+
+</details>
 
 ---
 

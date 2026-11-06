@@ -236,9 +236,12 @@ Wenn du deine Einrichtung ordnen möchtest, erstelle eine neue Szene:
 
 ## Zehntelsekunden in OBS anzeigen {#how-to-display-tenths-of-a-second-in-obs}
 
-*OBS liest Textdateien standardmäßig etwa einmal pro Sekunde. Damit Zehntelsekunden korrekt angezeigt werden, muss diese Verzögerung verkürzt werden.*
+*Am einfachsten verbinden Sie ScoreBoard per WebSocket mit OBS: Die Daten werden sofort übertragen, sodass Zehntelsekunden ohne Plugins korrekt angezeigt werden – siehe [Text per WebSocket an OBS senden](#how-to-send-text-to-obs-via-websocket).*
 
-*Wenn ScoreBoard die Daten per WebSocket an OBS sendet, wird das Plugin nicht benötigt – siehe [Text per WebSocket an OBS senden](#how-to-send-text-to-obs-via-websocket). Die folgenden Schritte gelten für Textdateiquellen.*
+<details class="legacy-method" markdown="1">
+<summary>Alte Methode: Textdateien + Plugin Advanced Scene Switcher</summary>
+
+*OBS liest Textdateien standardmäßig etwa einmal pro Sekunde. Damit Zehntelsekunden bei Textdateiquellen korrekt angezeigt werden, muss diese Verzögerung mit einem Plugin verkürzt werden.*
 
 ![Timer mit Zehntelsekunden in OBS mithilfe von Advanced Scene Switcher](/tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
@@ -285,6 +288,8 @@ Wenn du deine Einrichtung ordnen möchtest, erstelle eine neue Szene:
 - Wähle in den Einstellungen von ScoreBoard einen Stil für den Haupttimer (z. B. [:5.3] oder [5.3])
 - Stelle den Timer in ScoreBoard zum Testen auf 1 Minute (1:00)
 - Starte den Timer und prüfe das Ergebnis in OBS
+
+</details>
 
 ---
 

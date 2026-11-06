@@ -236,9 +236,12 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
 
 ## 如何在 OBS 中显示十分之一秒 {#how-to-display-tenths-of-a-second-in-obs}
 
-*OBS 默认大约每秒读取一次文本文件。要正确显示十分之一秒，需要缩短这一延迟。*
+*最简单的方法是通过 WebSocket 将 ScoreBoard 连接到 OBS：数据即时发送，无需任何插件即可正确显示十分之一秒——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。*
 
-*如果 ScoreBoard 通过 WebSocket 向 OBS 发送数据，则无需此插件——参见[如何通过 WebSocket 向 OBS 发送文本](#how-to-send-text-to-obs-via-websocket)。以下步骤适用于文本文件来源。*
+<details class="legacy-method" markdown="1">
+<summary>旧方法：文本文件 + Advanced Scene Switcher 插件</summary>
+
+*OBS 默认大约每秒读取一次文本文件。使用文本文件来源时，要正确显示十分之一秒，需要借助插件缩短这一延迟。*
 
 ![使用 Advanced Scene Switcher 在 OBS 中显示十分之一秒计时器](/tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
@@ -285,6 +288,8 @@ ScoreBoard 默认把这些文件写入 `下载/ScoreBoard Outputs`（可在偏�
 - 在 ScoreBoard 设置中为主计时器选择一种样式（例如 [:5.3] 或 [5.3]）
 - 为了测试，把 ScoreBoard 中的计时器设为 1 分钟（1:00）
 - 启动计时器并在 OBS 中查看效果
+
+</details>
 
 ---
 

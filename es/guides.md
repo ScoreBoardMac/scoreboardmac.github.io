@@ -236,9 +236,12 @@ Si quieres organizar tu configuración, crea una nueva escena:
 
 ## Cómo mostrar las décimas de segundo en OBS {#how-to-display-tenths-of-a-second-in-obs}
 
-*Por defecto, OBS lee los archivos de texto aproximadamente una vez por segundo. Para mostrar correctamente las décimas, hay que reducir ese retardo.*
+*La forma más sencilla es conectar ScoreBoard a OBS por WebSocket: los datos se envían al instante y las décimas se muestran correctamente sin ningún plugin. Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket).*
 
-*Si ScoreBoard envía los datos a OBS por WebSocket, el plugin no es necesario. Consulta [Cómo enviar texto a OBS por WebSocket](#how-to-send-text-to-obs-via-websocket). Los pasos siguientes son para fuentes de archivos de texto.*
+<details class="legacy-method" markdown="1">
+<summary>Método antiguo: archivos de texto + plugin Advanced Scene Switcher</summary>
+
+*Por defecto, OBS lee los archivos de texto aproximadamente una vez por segundo. Para mostrar correctamente las décimas con fuentes de archivos de texto, hay que reducir ese retardo con un plugin.*
 
 ![Cronómetro con décimas de segundo en OBS usando Advanced Scene Switcher](/tutorial-img/AdvancedSceneSwitcher/Show_tenths_timer.gif)
 
@@ -285,6 +288,8 @@ Si quieres organizar tu configuración, crea una nueva escena:
 - En los ajustes de ScoreBoard, elige un estilo para el cronómetro principal (p. ej., [:5.3] o [5.3])
 - Para probar, ajusta el cronómetro de ScoreBoard a 1 minuto (1:00)
 - Inicia el cronómetro y comprueba el resultado en OBS
+
+</details>
 
 ---
 
